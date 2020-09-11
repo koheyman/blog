@@ -1,0 +1,318 @@
+// *******************************************************************************************************
+// # 投稿ページ
+// *******************************************************************************************************
+
+.p-post {
+
+  // override: c-breadcrumb
+  .c-breadcrumb {
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.p-post__body {
+  @media #{$sp} {
+    margin-top: 30px;
+  }
+  @media #{$pc} {
+    margin-bottom: 80px;
+  }
+}
+
+.p-post__image {
+  display: block;
+  margin: auto;
+}
+
+.p-post__title {
+  font-weight: bold;
+
+  @media #{$sp} {
+    padding-top: 15px;
+    font-size: 22px;
+    line-height: 1.42;
+  }
+  @media #{$pc} {
+    font-size: 30px;
+  }
+}
+
+.p-post__time {
+  color: #7e858c;
+  font-size: 12px;
+}
+
+.p-post__person {
+  display: flex;
+
+  @media #{$sp} {
+  }
+  @media #{$pc} {
+    margin-top: 25px;
+  }
+
+  // override: c-person-card
+  .c-person-card__heading {
+    @media #{$pc} {
+      font-size: 20px;
+    }
+  }
+
+}
+.p-post__person-image {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.p-post__person-name {
+  color: $baseColor;
+
+  @media #{$pc} {
+    font-size: 16px;
+  }
+}
+
+.p-post__content {
+  @media #{$sp} {
+    margin-top: 40px;
+  }
+}
+
+.p-post__tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0 0 0;
+}
+.p-post__tag-item {
+  margin: 0 10px 10px 0;
+
+  @media #{$pc} {
+    margin: 0 20px 15px 0;
+  }
+}
+
+.p-post__share-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media #{$sp} {
+    margin-top: 30px;
+  }
+  @media #{$pc} {
+    margin-top: 40px;
+  }
+}
+.p-post__share-item {
+  margin: 0 10px 10px 0;
+}
+.p-post__share-link {
+  display: block;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}
+
+.p-post__follow-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media #{$sp} {
+    margin-top: 15px;
+  }
+  @media #{$pc} {
+    margin-top: 20px;
+  }
+}
+.p-post__follow-item {
+  margin-right: 10px;
+
+  // override: c-label
+  .c-label {
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+}
+
+.p-post__follow-image {
+  margin-right: 4px;
+}
+
+.p-post__person-card {
+  @media #{$sp} {
+    margin-top: 80px;
+  }
+  @media #{$pc} {
+    margin-top: 120px;
+  }
+
+  // override :c-person-card
+  .c-person-card__heading {
+    @media #{$pc} {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+  .c-person-card__name {
+    @media #{$sp} {
+      font-size: 18px;
+    }
+  }
+  .c-person-card__content {
+    @media #{$sp} {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
+}
+
+.p-post__relative {
+  @media #{$sp} {
+    margin-top: 60px;
+  }
+  @media #{$pc} {
+    margin-top: 120px;
+  }
+}
+.p-post__relative-posts {
+  margin-top: 20px;
+
+  @include columns(1, "20px 20px", 1, "30px 0");
+
+  @media #{$sp} {
+    // override: c-post-card
+    .c-post-card__title {
+      margin-top: 0;
+    }
+    .c-post-card__block {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 120px minmax(0, 1fr);
+      border-radius: 6px;
+      gap: 15px;
+    }
+    .c-post-card__title {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .c-post-card__subtext {
+      margin-top: 3px;
+      font-size: 11px;
+    }
+    .c-post-card__text {
+      display: block;
+      font-size: 13px;
+
+      &::before {
+        content: none;
+      }
+    }
+    .c-post-card__cat-list {
+      display: none;
+    }
+    .c-post-card__info {
+      display: block;
+    }
+  }
+}
+
+.p-post__head {
+  margin-top: 20px;
+
+  @media #{$pc} {
+  }
+}
+.p-post__head--social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  div {
+    margin-right: 10px;
+  }
+
+  @media #{$pc} {
+  }
+}
+.p-post__share-link {
+  img {
+    width: auto;
+    height: 30px;
+  }
+}
+.p-post__head--information {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.p-post__head--category {
+  font-size: 12px;
+  padding: 8px 20px;
+  border-radius: 15px;
+  line-height: 1;
+  border-width: 1px;
+  border-style: solid;
+  min-width: 90px;
+  text-align: center;
+
+  &.is-jobcan {
+    color: $JobcanColor;
+    border-color: $JobcanColor;
+  }
+  &.is-mixch {
+    color: $MixColor;
+    border-color: $MixColor;
+  }
+  &.is-medical {
+    color: $CliusColor;
+    border-color: $CliusColor;
+  }
+  &.is-game {
+    color: $GameColor;
+    border-color: $GameColor;
+  }
+  &.is-event {
+    color: $EventColor;
+    border-color: $EventColor;
+  }
+  &.is-donuts {
+    color: $DonutsColor;
+    border-color: $DonutsColor;
+  }
+}
+.p-post__head--date {
+  margin-left: 20px;
+  color: #333;
+  font-size: 15px;
+}
+.p-post__tags {
+  margin: 50px 0;
+}
+.p-post__tag {
+  margin-top: 10px;
+
+  @media #{$pc} {
+  }
+}
+.p-post__tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media #{$pc} {
+  }
+}
+.p-post__lead {
+  margin-top: 80px;
+  font-size: 16px;
+  line-height: 2;
+}

@@ -1,0 +1,51 @@
+// *******************************************************************************************************
+// # 人物
+// *******************************************************************************************************
+
+.p-person__breadcrumbs {
+  @media #{$sp} {
+    margin: 0;
+  }
+  @media #{$pc} {
+    margin: 0 0 0 125px;
+  }
+}
+
+.p-person__head {
+  @media #{$sp} {
+    margin-top: 10px;
+  }
+
+  // override: c-person-card
+  .c-person-card__head {
+    font-size: 24px;
+    line-height: 1.5;
+    @media #{$pc} {
+      margin-top: 5px;
+    }
+  }
+  .c-person-card__company {
+    @media #{$pc} {
+      display: inline;
+    }
+    @media #{$sp} {
+      font-size: 14px;
+    }
+  }
+  .c-person-card__name {
+    @media #{$sp} {
+      font-size: 22px;
+    }
+  }
+
+  // override: c-label
+  .c-label {
+    font-size: 14px;
+  }
+}
+
+.p-person__body {
+  @media #{$pc} {
+    margin-top: 60px;
+  }
+}

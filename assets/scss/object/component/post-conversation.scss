@@ -1,0 +1,18 @@
+.c-post-conversation {
+  margin: 1em 0;
+  display: flex;
+
+  // override: for admin style
+  .block-editor-rich-text:first-child {
+    flex-shrink: 0;
+  }
+}
+.c-post-conversation__person {
+  font-weight: bold;
+  padding-right: 1em;
+  flex-shrink: 0;
+}
+.c-post-conversation__voice {
+  margin: 0;
+  flex: 1 1 0%;
+}

@@ -1,0 +1,53 @@
+// /* --------------------------------------------------
+//  color
+// -------------------------------------------------- */
+$colors: (
+  'base' : $baseColor,
+  'accent' : $accentColor,
+  'main' : $mainColor,
+  'gray' : $grayColor,
+  'white': #fff,
+  'orange' : #EDA230,
+  'brown' : #CB825A,
+  'green' : #81AC25,
+  'blue' : #4EA0D2,
+  'pink' : #D865B7,
+);
+@each $name, $color in $colors {
+  .u-color-#{$name} {
+    color: $color;
+  }
+  .u-bg-#{$name} {
+    background: $color;
+  }
+
+  // For gutenberg class
+  .has-#{$name}-color {
+    color: $color !important;
+  }
+  .has-#{$name}-background-color {
+    background: $color !important;
+  }
+}
+
+// /* --------------------------------------------------
+//  background-color
+// -------------------------------------------------- */
+.u-bg-white {
+  background-color: #fff;
+}
+.u-bg-gray {
+  background-color: #e4e4e4;
+}
+.u-bg-lightgray {
+  background-color: $lightGrayColor;
+}
+.u-bg-lightgreen {
+  background-color: $lightGreenColor;
+}
+.u-bg-lightblue {
+  background-color: $lightBlueColor;
+}
+.u-bg-gradation_green {
+  background-image: linear-gradient(297deg, #b6fff3, #d7f5ba);
+}

@@ -1,0 +1,79 @@
+// *******************************************************************************************************
+// # ラベル
+// *******************************************************************************************************
+
+.c-category {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 15px;
+  line-height: 1;
+  border-width: 1px;
+  border-style: solid;
+  min-width: 90px;
+  text-align: center;
+
+  &.is-jobcan {
+    color: $JobcanColor;
+    border-color: $JobcanColor;
+  }
+  &.is-mixch {
+    color: $MixColor;
+    border-color: $MixColor;
+  }
+  &.is-medical {
+    color: $CliusColor;
+    border-color: $CliusColor;
+  }
+  &.is-game {
+    color: $GameColor;
+    border-color: $GameColor;
+  }
+  &.is-event {
+    color: $EventColor;
+    border-color: $EventColor;
+  }
+  &.is-donuts {
+    color: $DonutsColor;
+    border-color: $DonutsColor;
+  }
+}
+
+.c-category__bg {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 12px;
+  line-height: 1;
+  border-width: 1px;
+  border-style: solid;
+  min-width: 90px;
+  color: #fff;
+  text-align: center;
+
+  &.is-jobcan {
+    background-color: $JobcanColor;
+    border-color: $JobcanColor;
+  }
+  &.is-mixchannel {
+    background-color: $MixColor;
+    border-color: $MixColor;
+  }
+  &.is-medical {
+    background-color: $CliusColor;
+    border-color: $CliusColor;
+  }
+  &.is-game {
+    background-color: $GameColor;
+    border-color: $GameColor;
+  }
+  &.is-event {
+    background-color: $EventColor;
+    border-color: $EventColor;
+  }
+  &.is-donuts {
+    background-color: $DonutsColor;
+    border-color: $DonutsColor;
+  }
+}
+

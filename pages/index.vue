@@ -1,13 +1,14 @@
 <template>
-  <div class="container">
+  <div class="container u-bg-gray">
     <div>
-      <!--<logo />-->
+      <logo />
       <h1 class="title">
         sample blog
       </h1>
       <h2 class="subtitle">
         enjoy frontend 
       </h2>
+      <box />
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -30,15 +31,17 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Box from '~/components/Box.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Box
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -54,7 +57,7 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: $subColor;
   letter-spacing: 1px;
 }
 

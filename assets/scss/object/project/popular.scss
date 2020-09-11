@@ -1,0 +1,25 @@
+// *******************************************************************************************************
+// # 人気記事
+// *******************************************************************************************************
+
+.p-popular__posts {
+  margin-top: 20px;
+  counter-reset: ranking;
+
+  @include columns(1, "0 0", 1, "20px 0");
+}
+
+.p-popular__post {
+  position: relative;
+
+  @media #{$pc} {
+    margin: 0 -10px;
+  }
+
+  // override: c-post-card-small
+  .c-post-card-small__block {
+    @media #{$pc} {
+      padding: 10px;
+    }
+  }
+}

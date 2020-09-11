@@ -1,0 +1,120 @@
+// *******************************************************************************************************
+// # utility class
+// *******************************************************************************************************
+
+// /* --------------------------------------------------
+//	text align
+// -------------------------------------------------- */
+.u-ta-c { text-align: center !important; }
+.u-ta-l { text-align: left !important; }
+.u-ta-r { text-align: right !important; }
+
+
+// /* --------------------------------------------------
+//	vertical align
+// -------------------------------------------------- */
+.u-va-t { vertical-align: top !important; }
+.u-va-m { vertical-align: middle !important; }
+.u-va-b { vertical-align: bottom !important; }
+
+
+// /* --------------------------------------------------
+//	position
+// -------------------------------------------------- */
+.u-pos-r { position: relative !important; }
+.u-pos-a { position: absolute !important; }
+
+
+// /* --------------------------------------------------
+//	display
+// -------------------------------------------------- */
+.u-show { display: block !important; }
+.u-hide { display: none !important; }
+.u-visible { visibility: visible !important; }
+.u-invisible { visibility: hidden !important; }
+
+
+// /* --------------------------------------------------
+//	width
+// -------------------------------------------------- */
+.u-w-full { width: 100% !important; }
+
+// /* --------------------------------------------------
+//  display
+// -------------------------------------------------- */
+.u-block {
+  display: block;
+}
+
+// /* --------------------------------------------------
+//  inner
+// -------------------------------------------------- */
+.u-inner {
+  width: 100%;
+
+  @media #{$sp} {
+    padding: 0 20px;
+  }
+  @media #{$pc} {
+    max-width: $innerWitdh;
+    margin: 0 auto;
+  }
+}
+
+.u-inner--small {
+  @media #{$pc} {
+    max-width: 700px;
+  }
+}
+
+
+// /* --------------------------------------------------
+//  switch display
+// -------------------------------------------------- */
+
+@media #{$pc} {
+
+  .u-pc-none {
+      display: none !important;
+  }
+
+}
+
+@media #{$sp} {
+
+  .u-sp-none {
+      display: none !important;
+  }
+
+}
+
+
+// /* --------------------------------------------------
+//  others
+// -------------------------------------------------- */
+
+// 画像を丸く切り抜く
+.u-circle {
+  border-radius: 50%;
+}
+
+// テキスト省略（1行）
+.u-text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 外部リンク
+// .u-outerlink {
+//   &::before {
+//     content: "";
+//     background: url('../static/img/common/icn/icn_outerlink.svg') no-repeat center/contain;
+//     width: 1em;
+//     height: 1em;
+//     display: inline-block;
+//     margin-right: 5px;
+//     vertical-align: sub;
+//     flex-shrink: 0;
+//   }
+// }

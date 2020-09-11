@@ -1,0 +1,97 @@
+// *******************************************************************************************************
+// # 人物カード
+// *******************************************************************************************************
+
+.c-person-card {
+  display: grid;
+
+  @media #{$sp} {
+    grid-template: "thumb head" auto
+    "body body" auto
+    / 50px auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+  }
+  @media #{$pc} {
+    grid-template: "thumb head" auto
+    "thumb body" auto
+    / 100px auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
+  }
+
+  // override: c-label
+  .c-label {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 2px 5px;
+    font-size: 14px;
+  }
+  .c-label--icon {
+    padding: 2px 3px;
+  }
+}
+
+.c-person-card__thumb {
+  grid-area: thumb;
+}
+
+.c-person-card__head {
+  display: flex;
+  grid-area: head;
+  align-items: center;
+}
+
+.c-person-card__body {
+  grid-area: body;
+}
+
+.c-person-card__company {
+  @media #{$pc} {
+    display: inline;
+  }
+  @media #{$sp} {
+    display: block;
+    font-weight: normal;
+  }
+}
+
+.c-person-card__name {
+  @media #{$sp} {
+    display: block;
+  }
+  @media #{$pc} {
+    display: inline-block;
+  }
+}
+
+.c-person-card__link-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media #{$sp} {
+    margin-top: 20px;
+  }
+  @media #{$pc} {
+    margin-top: 15px;
+  }
+}
+
+.c-person-card__link-item {
+  margin-bottom: 10px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.c-person-card__image {
+  object-fit: contain;
+}
+
+
+.c-person-card__content {
+  line-height: 2;
+  word-break: break-all;
+}

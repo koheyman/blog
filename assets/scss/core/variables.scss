@@ -1,0 +1,93 @@
+// =========================================================
+// # global variables
+//     ・breakpoint
+//     ・contents width
+//     ・text, color
+//     ・font size
+//     ・radius size
+//     ・fontfamily
+// ========================================================= */
+
+// ## breakpoint
+$sp:  "only screen and (max-width: 736px)";
+$pc:  "only screen and (min-width: 737px)";
+$iphone5:  "only screen and (max-width: 320px)";
+
+// ## for Retina
+$retina:  "only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx)";
+
+// ## contents width
+$baseContentsWidth      : 1100px;
+$innerWitdh             : 1090px;
+
+// ## default color
+$baseColor              : #212121;
+$subColor               : #1b79ad;
+$mainColor              : green;
+$accentColor            : red;
+$grayColor              : #F7F8F9;
+
+// ## default
+$baseHoverColor         : #F7F8F9;
+
+$lightBlueColor         : #d3e6fd;
+$lightGreenColor        : #eaf6f5;
+$lightGrayColor         : #f9f9f9;
+
+$JobcanColor            : #007CFF;
+$JobcanKintaiColor      : #1fb9d9;
+$JobcanWfColor          : #008842;
+$JobcanExColor          : #8ec31f;
+$JobcanRecruitColor     : #e84531;
+$JobcanRoumuColor       : #083a77;
+$JobcanPayrollColor     : #ffdb00;
+$JobcanAppsColor        : #4a90e2;
+$JobcanBpoColor         : #cccccc;
+
+$MixColor               : #dd3333;
+$CliusColor             : #567bf6;
+$GameColor              : #A757A8;
+$EventColor             : #f0a000;
+$DonutsColor            : #000;
+
+// ## text color, link color
+$baseTextColor          : #333333;
+$linkTextColor          : #333333;
+
+// ## border color
+$baseBorderColor        : #979797;
+
+// ## font size
+$baseFontSize           : 14px;
+$baseLetterSpacing      : 0.05em;
+$baseLineHeight         : 1.5;
+
+// ## radius size
+$baseRadius: 3px;
+
+// ## fontfamily
+$baseFontFamily: 'Noto Sans JP', sans-serif;
+$ieFontFamily: Verdana, Meiryo, sans-serif;
+$YuFontFamily: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+$YuBoldFontFamily: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI semibold", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic", "Segoe UI", Verdana, Meiryo, sans-serif;
+
+// ## opacity
+$baseOpacity: 0.85;
+
+// ## SNS
+$twitter: (
+  "color": #48AAE6,
+  "icon": "./img/common/icn/icn_twitter_white.svg",
+  "icon-white": "./img/common/icn/icn_twitter.svg",
+);
+$facebook: (
+  "color": #3B5998,
+  "icon": "./img/common/icn/icn_facebook.svg",
+  "icon-white": "./img/common/icn/icn_facebook_white.svg",
+  "icon-circle": "./img/common/icn/icn_facebook.svg",
+);
+$hatena: (
+  "color": #0091DE,
+  "icon": "./img/common/icn/icn-hatena.svg",
+  "icon-white": "./img/common/icn/icn_hatena_white.svg",
+);

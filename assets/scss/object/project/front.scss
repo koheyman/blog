@@ -1,0 +1,72 @@
+// *******************************************************************************************************
+// トップページ
+// *******************************************************************************************************
+
+.p-front__posts {
+  @media #{sp} {
+    margin-top: 0;
+  }
+}
+
+.p-front__main-inner {
+  display: block;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}
+.p-front__main-body {
+  position: relative;
+  top: -40px;
+}
+.p-front__main-person {
+  display: flex;
+
+  @media #{$pc} {
+    margin-left: 15px;
+  }
+}
+.p-front__main-person-thumb {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff;
+}
+.p-front__main-person-info {
+  color: #7e858c;
+
+  @media #{$pc} {
+    margin-top: 55px;
+    padding-left: 10px;
+    font-size: 16px;
+  }
+}
+.p-front__main-title {
+  font-weight: 500;
+
+  @media #{$pc} {
+    padding-top: 10px;
+    font-size: 30px;
+  }
+}
+.p-front__main-category {
+  padding-top: 10px;
+}
+.p-front__main-terms {
+  padding-top: 10px;
+
+  li {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+}
+
+.p-front__btn {
+  margin-top: 20px;
+  text-align: center;
+
+  @media #{$pc} {
+    margin-top: 40px;
+  }
+}

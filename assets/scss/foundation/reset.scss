@@ -1,0 +1,44 @@
+// *******************************************************************************************************
+// # reset - export to common.scss
+// *******************************************************************************************************
+
+ //////////////////////////////////////////////////////
+/* # reset
+----------------------------------- */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+article, header, footer, aside, figure, figcaption, nav, section {
+    display: block;
+}
+
+ul, ol {
+    list-style: none;
+    list-style-type: none;
+}
+
+p, li, dt, dd, th, td, pre {
+    line-break: strict;
+    word-break: break-strict;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: 100%;
+}

@@ -1,0 +1,106 @@
+// *******************************************************************************************************
+// # margin / padding
+// *******************************************************************************************************
+
+// 0〜100 までを 5 刻みで定義する
+@for $i from 0 through 20 {
+
+  // Margin
+  // -------------------------------------
+
+  // PC&SP
+  .u-mt#{$i*5} {
+    margin-top: #{$i*5}px !important;
+  }
+  .u-mb#{$i*5} {
+    margin-bottom: #{$i*5}px !important;
+  }
+  .u-mr#{$i*5} {
+    margin-right: #{$i*5}px !important;
+  }
+  .u-ml#{$i*5} {
+    margin-left: #{$i*5}px !important;
+  }
+
+  // PC
+  @media #{$pc} {
+    .u-pc-mt#{$i*5} {
+      margin-top: #{$i*5}px !important;
+    }
+    .u-pc-mb#{$i*5} {
+      margin-bottom: #{$i*5}px !important;
+    }
+    .u-pc-mr#{$i*5} {
+      margin-right: #{$i*5}px !important;
+    }
+    .u-pc-ml#{$i*5} {
+      margin-left: #{$i*5}px !important;
+    }
+  }
+
+  // SP
+  @media #{$sp} {
+    .u-sp-mt#{$i*5} {
+      margin-top: #{$i*5}px !important;
+    }
+    .u-sp-mb#{$i*5} {
+      margin-bottom: #{$i*5}px !important;
+    }
+    .u-sp-mr#{$i*5} {
+      margin-right: #{$i*5}px !important;
+    }
+    .u-sp-ml#{$i*5} {
+      margin-left: #{$i*5}px !important;
+    }
+  }
+
+  // Padding
+  // -------------------------------------
+
+  // PC&SP
+  .u-pt#{$i*5} {
+    padding-top: #{$i*5}px !important;
+  }
+  .u-pb#{$i*5} {
+    padding-bottom: #{$i*5}px !important;
+  }
+  .u-pr#{$i*5} {
+    padding-right: #{$i*5}px !important;
+  }
+  .u-pl#{$i*5} {
+    padding-left: #{$i*5}px !important;
+  }
+
+  // PC
+  @media #{$pc} {
+    .u-pc-pt#{$i*5} {
+      padding-top: #{$i*5}px !important;
+    }
+    .u-pc-pb#{$i*5} {
+      padding-bottom: #{$i*5}px !important;
+    }
+    .u-pc-pr#{$i*5} {
+      padding-right: #{$i*5}px !important;
+    }
+    .u-pc-pl#{$i*5} {
+      padding-left: #{$i*5}px !important;
+    }
+  }
+
+  // SP
+  @media #{$sp} {
+    .u-sp-pt#{$i*5} {
+      padding-top: #{$i*5}px !important;
+    }
+    .u-sp-pb#{$i*5} {
+      padding-bottom: #{$i*5}px !important;
+    }
+    .u-sp-pr#{$i*5} {
+      padding-right: #{$i*5}px !important;
+    }
+    .u-sp-pl#{$i*5} {
+      padding-left: #{$i*5}px !important;
+    }
+  }
+
+}

@@ -1,0 +1,57 @@
+// *******************************************************************************************************
+// # 採用情報はこちら
+// *******************************************************************************************************
+
+.c-recruit-info {
+  margin: 30px 0;
+  padding: 0;
+
+  @media #{$pc} {
+  }
+}
+
+.c-recruit-info__inner {
+  @media #{$pc} {
+  }
+}
+
+.c-recruit-info__title {
+  @media #{$pc} {
+  }
+}
+
+.c-recruit-info__list {
+  margin-top: 10px;
+
+  @media #{$pc} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.c-recruit-info__item {
+
+  @media #{$sp} {
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  a {
+  
+    @media #{$sp} {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    @media #{$pc} {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 360px;
+    }  
+  }
+}

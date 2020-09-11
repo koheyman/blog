@@ -1,0 +1,17 @@
+// *******************************************************************************************************
+// # fonts - export to common.scss
+// *******************************************************************************************************
+
+ //////////////////////////////////////////////////////
+/* # fonts
+----------------------------------- */
+
+ @font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Noto Sans CJK JP Regular"),
+       url(fonts/NotoSansCJKjp-Regular.woff2) format('woff2'),
+       url(fonts/NotoSansCJKjp-Regular.woff) format('woff');
+ }

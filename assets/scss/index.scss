@@ -1,0 +1,26 @@
+//
+// クライアントページ用
+//
+
+// 変数
+@import 'core/variables.scss';
+@import 'core/mixins.scss';
+
+// ライブラリ
+// @import "lib/slick.scss";
+// @import "lib/slick-theme.scss";
+// @import "lib/barba.scss";
+@import "lib/loading/loaders";
+
+// ベース
+@import 'foundation/reset.scss';
+@import 'foundation/normalize.scss';
+@import 'foundation/base.scss';
+@import 'foundation/fonts.scss';
+@import 'object/utility/color.scss';
+@import 'object/utility/utils.scss';
+
+// 詳細
+//@import 'layout/*';
+// @import 'object/component/*';
+// @import 'object/project/*';

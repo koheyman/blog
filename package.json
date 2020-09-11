@@ -11,12 +11,18 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
-    "@nuxtjs/axios": "^5.3.6"
+    "@nuxtjs/axios": "^5.3.6",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/style-resources": "^1.0.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4"
+    "import-glob-loader": "^1.1.0",
+    "node-sass": "^4.14.1",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "prettier": "^1.16.4",
+    "sass-loader": "^10.0.2"
   }
 }

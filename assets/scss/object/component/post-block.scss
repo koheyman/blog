@@ -1,0 +1,77 @@
+// *******************************************************************************************************
+// # 投稿の拡張ブロック
+// *******************************************************************************************************
+
+.c-post-block {
+  @media #{$sp} {
+    padding: 25px;
+  }
+  @media #{$pc} {
+    padding: 30px 40px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.c-post-block--check {
+  position: relative;
+  background-color: $grayColor;
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    padding: 1px 10px;
+    border-radius: 2px;
+    background: #409dff;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    content: "Check!";
+  }
+  &::after {
+    position: absolute;
+    top: calc( -10px + 20px);
+    left: calc( -10px + 43px);
+    border: solid 4px;
+    border-color: #409dff #409dff transparent transparent;
+    content: "";
+  }
+}
+
+.c-post-block--point {
+  position: relative;
+  border: 1px solid #ccc;
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    padding: 1px 10px;
+    border-radius: 2px;
+    background: #e5c939;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    content: "Point!";
+  }
+  &::after {
+    position: absolute;
+    top: calc( -10px + 20px);
+    left: calc( -10px + 43px);
+    border: solid 4px;
+    border-color: #e5c939 #e5c939 transparent transparent;
+    content: "";
+  }
+}
+
+.c-post-block--border {
+  border: 1px solid $baseColor;
+}
+.c-post-block--border-gray {
+  border: 1px solid #ccc;
+}

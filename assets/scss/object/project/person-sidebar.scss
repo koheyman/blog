@@ -1,0 +1,61 @@
+// *******************************************************************************************************
+// # サイドバー人物
+// *******************************************************************************************************
+
+.p-person-sidebar__list {
+  margin-top: 10px;
+  @include columns(3, "0", 3, "20px 15px");
+
+  @media #{$sp} {
+    margin-top: 20px;
+  }
+}
+
+.p-person-sidebar__item {
+  @media #{$sp} {
+    text-align: center;
+  }
+}
+.p-person-sidebar__item-link {
+  @media #{$pc} {
+    display: block;
+    height: 100%;
+    padding: 10px 5px;
+    text-align: center;
+    transition: 0.3s;
+
+    &:hover {
+      border-radius: 6px;
+      background: #f7f8f9;
+      transition: 0.3s;
+    }
+  }
+}
+.p-person-sidebar__item-note {
+  color: #7e858c;
+
+  @media #{$sp} {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+  @media #{$pc} {
+    margin-top: 16px;
+    font-size: 11px;
+  }
+}
+.p-person-sidebar__item-title {
+  margin-top: 3px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+.p-person-sidebar__item-img {
+  @media #{$sp} {
+    width: 70px;
+    height: 70px;
+  }
+  @media #{$pc} {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,94 @@
+// *******************************************************************************************************
+// # 投稿バナー
+// *******************************************************************************************************
+
+// バナー
+.c-post-banner {
+  display: flex;
+  margin: 30px 0;
+  padding: 0;
+  border: 1px solid #ccc;
+
+  @media #{$pc} {
+    justify-content: space-between;
+  }
+  @media #{$sp} {
+    flex-direction: column-reverse;
+  }
+}
+
+
+.c-post-banner__head {
+  @media #{$pc} {
+    flex-grow: 1;
+    padding: 30px 20px;
+  }
+  @media #{$sp} {
+    padding: 25px;
+  }
+}
+
+.c-post-banner__body {
+  @media #{$pc} {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    min-height: 240px;
+  }
+}
+
+.c-post-banner__image {
+  @media #{$pc} {
+    max-width: 240px;
+  }
+}
+
+.c-post-banner__text {
+  font-size: 12px;
+  text-align: left;
+}
+
+.c-post-banner__heading {
+  color: $baseColor;
+  text-align: left;
+
+  @media #{$sp} {
+    margin-bottom: 5px;
+  }
+}
+
+.c-post-banner__button {
+  display: block;
+  margin: 20px auto 0;
+  font-size: 14px;
+
+  @media #{$pc} {
+    width: 80%;
+  }
+  @media #{$sp} {
+    margin-top: 30px;
+  }
+}
+
+.c-post-banner__button-link {
+  display: block;
+  background: $baseColor;
+  color: #fff !important;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+
+  @media #{$pc} {
+    padding: 10px;
+    font-size: 14px;
+  }
+  @media #{$sp} {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}

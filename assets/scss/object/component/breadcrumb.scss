@@ -1,0 +1,33 @@
+// *******************************************************************************************************
+// # パンくずリスト
+// *******************************************************************************************************
+
+.c-breadcrumbs {
+  @media #{$sp} {
+    margin-bottom: 5px;
+  }
+}
+
+.c-breadcrumb {
+  display: inline;
+  align-items: center;
+  color: #7e858c;
+
+  @media #{$sp} {
+    font-size: 12px;
+  }
+  @media #{$pc} {
+    font-size: 14px;
+  }
+
+  &::after {
+    padding: 0 3px 0 3px;
+    font-size: 80%;
+    vertical-align: text-bottom;
+    content: ">";
+  }
+}
+
+.c-breadcrumb__link {
+  color: $baseColor;
+}

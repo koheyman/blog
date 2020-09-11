@@ -1,0 +1,78 @@
+// *******************************************************************************************************
+// # mixin
+// *******************************************************************************************************
+
+// ## opacity
+// --------------------------------------------------------
+// `@include %opacity;`
+
+@mixin opacity($num: 0.80) {
+    opacity: $num;
+    filter: alpha(opacity=$num * 100);
+}
+
+
+// ## mouseover animation opacity
+// --------------------------------------------------------
+// `@include %hover;`
+// `@include %hout;`
+@mixin hover($num: 0.85, $sec: 0.2s) {
+    opacity: $num;
+    filter: alpha(opacity=$num * 100);
+    transition: $sec ease-in-out;
+}
+@mixin hout($sec: 0.2s) {
+    transition: $sec ease-in-out;
+}
+
+
+// ## fontsize
+// --------------------------------------------------------
+// @mixin fontSize($size, $base: 14) {
+//     font-size: ($size / $base) * 1rem;
+// }
+
+// rem
+@mixin fontSize($size, $base: 14) {
+    font-size: ($size / $base) * 1rem;
+}
+
+// ## 数に応じて、均等な横幅のグリッドを作成する
+// --------------------------------------------------------
+// $column     ... {int}    カラム数
+// $gap        ... {string} gapプロパティ
+// $SP_column  ... {int}    SP のカラム数
+// $SP_gap     ... {string} SP のgapプロパティ [デフォルト:PCと同じ]
+@mixin columns($column, $gap, $SPcolumn, $SPgap: '') {
+
+  // IE11対応
+  @media #{$pc} and (-ms-high-contrast: none) {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      width: calc( 100% / #{$column} - 3% );
+      margin: 0 3% 3% 0;
+
+      &:nth-of-type(#{$column}n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  display: grid;
+
+  @media #{$sp} {
+    grid-template-rows: auto;
+    grid-template-columns: repeat($SPcolumn, 1fr);
+    @if $SPgap == '' {
+      $SPgap: $gap;
+    }
+    gap: #{$SPgap};
+  }
+  @media #{$pc} {
+    grid-template-rows: auto;
+    grid-template-columns: repeat($column, 1fr);
+    gap: #{$gap};
+  }
+}

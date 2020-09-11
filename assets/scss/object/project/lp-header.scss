@@ -1,0 +1,17 @@
+// *******************************************************************************************************
+// # LP - ヘッダー
+// *******************************************************************************************************
+
+.p-lp-header {
+
+  // override: c-header-heading
+  .c-header-heading {
+    position: static;
+  }
+}
+.p-lp-header__inner {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+}

@@ -1,0 +1,61 @@
+// *******************************************************************************************************
+// ポストカード（簡易版）
+// *******************************************************************************************************
+
+.c-post-card-small__block {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 120px minmax(0, 1fr);
+  border-radius: 6px;
+  transition: 0.3s;
+  gap: 15px;
+  transition: 0.2s;
+
+  &:hover {
+    // background: $grayColor;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+}
+
+.c-post-card-small__title {
+  @media #{$pc} {
+    font-size: 13px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
+.c-post-card-small__subtext {
+  color: #7e858c;
+  @media #{$sp} {
+    margin-top: 3px;
+    font-size: 11px;
+  }
+  @media #{$pc} {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+}
+
+.c-post-card-small__text {
+  color: #7e858c;
+
+  @media #{$sp} {
+    font-size: 13px;
+  }
+  @media #{$pc} {
+    font-size: 12px;
+  }
+}
+
+.c-post-card-small__thumb {
+  text-align: center;
+}
+
+.c-post-card-small__category {
+  margin-top: 5px;
+}
