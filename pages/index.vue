@@ -1,44 +1,51 @@
 <template>
   <div class="container u-bg-gray">
+    <headers />
     <div>
-      <logo />
       <h1 class="title">
         sample blog
       </h1>
       <h2 class="subtitle">
         enjoy frontend 
       </h2>
-      <box />
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+        <ul>
+          <li v-for="content in contents" :key="content.id">
+            <nuxt-link :to="`/${content.id}`">
+              {{ content.title }}
+            </nuxt-link>
+          </li>
+        </ul>
+
     </div>
   </div>
 </template>
 
 <script>
+import Headers from '~/layouts/header.vue'
+import List from '~/components/List.vue'
 import Logo from '~/components/Logo.vue'
-import Box from '~/components/Box.vue'
+import axios from 'axios'
 
 export default {
   components: {
-    Logo,
-    Box
+    Headers,
+    List,
+    Logo
+  },
+    async asyncData() {
+    const { data } = await axios.get(
+      // your-service-id部分は自分のサービスidに置き換えてください
+      'https://oipon.microcms.io/api/v1/posts',
+      {
+        // your-api-key部分は自分のapi-keyに置き換えてください
+        headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
+      }
+    )
+    return data
   }
+
 }
+
 </script>
 
 <style lang="scss">

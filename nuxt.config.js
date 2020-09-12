@@ -3,6 +3,8 @@ const description = 'フロントエンドのエンジニアとしてなんと�
 const url = 'https://boring-meninsky-8e1bf1.netlify.app/'
 const ogImage = `${url}/assets/image/ogp.jpg`
 
+import axios from 'axios'
+
 export default {
   mode: 'universal',
   /*
@@ -98,6 +100,21 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+  generate: {
+    async routes() {
+      const pages = await axios
+        .get('https://oipon.microcms.io/api/v1/posts?limit=100', {
+          headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
+        })
+        .then((res) =>
+          res.data.contents.map((content) => ({
+            route: `/${content.id}`,
+            payload: content
+          }))
+        )
+      return pages
     }
   }
 }
