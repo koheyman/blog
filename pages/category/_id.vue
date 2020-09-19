@@ -2,10 +2,11 @@
   <div class="container u-bg-gray">
     <headers />
     <main class="wrap">
+      <div>カテゴリ</div>
       <ul>
-        <li v-for="content in contents" :key="content.id">
-          <nuxt-link :to="`/${content.id}`">
-            {{ content.title }}
+        <li v-for="item in items" :key="item.id">
+          <nuxt-link :to="`/${item.id}`">
+           {{ item.title }}
           </nuxt-link>
         </li>
       </ul>
@@ -15,30 +16,35 @@
 
 <script>
 import Headers from '~/layouts/header.vue'
-import List from '~/components/List.vue'
-import Logo from '~/components/Logo.vue'
 import axios from 'axios'
 
 export default {
   components: {
-    Headers,
-    List,
-    Logo
+    Headers
   },
-    async asyncData() {
+
+  data() {
+    return {
+      items: []
+    };
+  },
+
+  async asyncData({ params }) {
+    console.log(params)
     const { data } = await axios.get(
-      // your-service-id部分は自分のサービスidに置き換えてください
-      'https://oipon.microcms.io/api/v1/posts',
+      `https://oipon.microcms.io/api/v1/posts?filters=category[equals]${params.id}`,
       {
-        // your-api-key部分は自分のapi-keyに置き換えてください
         headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
       }
-    )
-    return data
+    );
+    console.log(data.contents)
+
+    return {
+      items: data.contents
+    };
   }
 
 }
-
 </script>
 
 <style lang="scss">
