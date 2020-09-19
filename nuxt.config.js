@@ -114,7 +114,18 @@ export default {
             payload: content
           }))
         )
-      return pages
+      const categories = await axios
+        .get("https://oipon.microcms.io/api/v1/categories", {
+          headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
+        })
+        .then(res => {
+          return res.data.contents.map(category => {
+            return "/category/" + category.id;
+          })
+        })
+        return Promise.all([pages, categories]).then(values => {
+          return values.join().split(",");
+        })
     }
   }
 }
