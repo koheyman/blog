@@ -7,10 +7,10 @@
         <div class="header-nav-inner">
           <ul class="header-nav-list">
             <li><a href="/">HOME</a></li>
-            <li><a href="/web">Web制作</a></li>
-            <li><a href="/javascript">Javascript</a></li>
-            <li><a href="/wordpress">WordPress</a></li>
-            <li><a href="/life">Life</a></li>
+            <li><a href="#">Web制作</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">WordPress</a></li>
+            <li><a href="#">Life</a></li>
           </ul>
         </div>
       </nav>

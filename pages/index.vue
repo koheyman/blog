@@ -1,31 +1,39 @@
 <template>
-  <div class="container u-bg-gray">
-    <headers />
-    <main class="wrap">
-      <ul>
-        <li v-for="content in contents" :key="content.id">
+  <main class="s-main">
+    <div class="c-article-cards">
+      <card v-for="content in contents" :key="content.id" :content="content"></card>
+      <!-- <article class="c-article-card">
+        <div class="c-article-card__inner">
           <nuxt-link :to="`/${content.id}`">
-            {{ content.title }}
-          </nuxt-link>
-        </li>
-      </ul>
-    </main>
-  </div>
+            <div class="c-article-card__thumb">
+              <img :src="content.mainimage.url" alt="">
+            </div>
+            <div class="c-article-card__overview">
+                <div class="c-article-card__head">
+                  <span class="c-article-card__date" v-text="$dayjs(`${content.publishedAt}`).format('YYYY/MM/DD')"></span>
+                </div>
+                <div class="c-article-card__title"><h2>{{ content.title }}</h2></div>
+            </div>
+          </nuxt-link>s
+        </div>
+      </article> -->
+    </div>
+  </main>
 </template>
 
 <script>
 import Headers from '~/layouts/header.vue'
 import List from '~/components/List.vue'
-import Logo from '~/components/Logo.vue'
+import Card from '~/components/Card.vue'
 import axios from 'axios'
 
 export default {
   components: {
     Headers,
     List,
-    Logo
+    Card
   },
-    async asyncData() {
+  async asyncData() {
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
       'https://oipon.microcms.io/api/v1/posts',
@@ -34,6 +42,7 @@ export default {
         headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
       }
     )
+    console.log(data)
     return data
   }
 
@@ -42,14 +51,8 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-.wrap {
-  margin: 0 auto;
-  width: 1040px;
+.s-main {
+  width: 820px;
 }
 
 </style>

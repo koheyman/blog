@@ -1,13 +1,10 @@
 <template>
-  <div class="container u-bg-gray">
-    <headers />
-    <main class="wrap">
-      <h1 class="title">{{ title }}</h1>
-      <p class="publishedAt">{{ publishedAt }}</p>
-      <p class="category">{{ category && category.name }}</p>
-      <div class="post" v-html="body"></div>
-    </main>
-  </div>
+  <main class="s-main">
+    <h1 class="title">{{ title }}</h1>
+    <p class="publishedAt" v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')"></p>
+    <p class="category">{{ category && category.name }}</p>
+    <div class="post" v-html="body"></div>
+  </main>
 </template>
 
 <script>

@@ -1,17 +1,14 @@
 <template>
-  <div class="container u-bg-gray">
-    <headers />
-    <main class="wrap">
-      <div>カテゴリ</div>
-      <ul>
-        <li v-for="item in items" :key="item.id">
-          <nuxt-link :to="`/${item.id}`">
-           {{ item.title }}
-          </nuxt-link>
-        </li>
-      </ul>
-    </main>
-  </div>
+  <main class="s-main">
+    <div>カテゴリ</div>
+    <div>
+      <article v-for="item in items" :key="item.id">
+        <nuxt-link :to="`/${item.id}`">
+          {{ item.title }}
+        </nuxt-link>
+      </article>
+    </div>
+  </main>
 </template>
 
 <script>
