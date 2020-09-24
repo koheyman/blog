@@ -29,6 +29,7 @@ export default {
 </script>
 <style scoped>
 .title {
+  font-size: 22px;
   font-weight: bold;
 }
 </style>
