@@ -1,6 +1,9 @@
 <template>
-  <div class="c-article-cards">
-    <card v-for="item in items" :key="item.id" :content="item"></card>
+  <div>
+    <div v-if="items.length == 0" class="noitem">まだ記事がありません。</div>
+    <div class="c-article-cards">
+      <card v-for="item in items" :key="item.id" :content="item"></card>
+    </div>
   </div>
 </template>
 
@@ -36,3 +39,9 @@ export default {
 
 }
 </script>
+<style lang="scss" scoped>
+.noitem {
+  margin: 50px 0;
+  text-align: center;
+}
+</style>

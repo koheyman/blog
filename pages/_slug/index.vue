@@ -2,7 +2,7 @@
   <div>
     <div class="category"><span>{{ category && category.name }}</span></div>
     <h1 class="title">{{ title }}</h1>
-    <div class="publishedAt" v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')"></div>
+    <div class="publishedAt"><span v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
     <div class="mainimage"><img :src="mainimage.url" alt=""></div>
     <div class="post" v-html="body"></div>
   </div>
@@ -59,6 +59,12 @@ export default {
   color: #757575;
   font-size: 14px;
   line-height: 14px;
+}
+.date {
+  padding-left: 20px;
+  background-size: 16px 16px;
+  background-position: 0 50%;
+  // :style="{ 'background-image': 'url(/assets/img/icn/icn_calendar.svg)' }"
 }
 .mainimage {
   img {
