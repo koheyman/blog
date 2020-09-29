@@ -3,7 +3,9 @@
     <headers />
     <div class="container">
       <div class="wrap">
-        <nuxt />
+        <main class="s-main">
+          <nuxt />
+        </main>
         <side />
       </div>
     </div>
@@ -25,18 +27,30 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
 }
 
 .wrap {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding-top: 20px;
-  width: 1200px;
+
+  @media #{$pc} {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 1200px;
+  }
+}
+.s-main {
+  width: 100%;
+  padding: 0 15px;
+
+  @media #{$pc} {
+    width: 820px;
+    padding: 0;
+  }
 }
 
 </style>

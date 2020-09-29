@@ -1,10 +1,9 @@
 <template>
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-description">フッター</div>
     </div>
     <p class="footer-copy">
-        &copy; Copyright 2020 HAPPY FRONTEND BLOG. All rights reserved.
+        &copy; 2020 OIPON FRONTEND BLOG.
       </p>
   </footer>
 </template>
@@ -31,5 +30,8 @@
 .header-description {
   font-size: 12px;
   font-weight: normal;
+}
+.footer-copy {
+  font-size: 12px;
 }
 </style>

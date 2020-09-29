@@ -1,23 +1,16 @@
 <template>
-  <main class="s-main">
-    <div>カテゴリ</div>
-    <div>
-      <article v-for="item in items" :key="item.id">
-        <nuxt-link :to="`/${item.id}`">
-          {{ item.title }}
-        </nuxt-link>
-      </article>
-    </div>
-  </main>
+  <div class="c-article-cards">
+    <card v-for="item in items" :key="item.id" :content="item"></card>
+  </div>
 </template>
 
 <script>
-import Headers from '~/layouts/header.vue'
+import Card from '~/components/Card.vue'
 import axios from 'axios'
 
 export default {
   components: {
-    Headers
+    Card
   },
 
   data() {
@@ -43,16 +36,3 @@ export default {
 
 }
 </script>
-
-<style lang="scss">
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-.wrap {
-  margin: 0 auto;
-  width: 1040px;
-}
-
-</style>

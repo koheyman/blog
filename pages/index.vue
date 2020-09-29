@@ -1,28 +1,11 @@
 <template>
-  <main class="s-main">
-    <div class="c-article-cards">
-      <card v-for="content in contents" :key="content.id" :content="content"></card>
-      <!-- <article class="c-article-card">
-        <div class="c-article-card__inner">
-          <nuxt-link :to="`/${content.id}`">
-            <div class="c-article-card__thumb">
-              <img :src="content.mainimage.url" alt="">
-            </div>
-            <div class="c-article-card__overview">
-                <div class="c-article-card__head">
-                  <span class="c-article-card__date" v-text="$dayjs(`${content.publishedAt}`).format('YYYY/MM/DD')"></span>
-                </div>
-                <div class="c-article-card__title"><h2>{{ content.title }}</h2></div>
-            </div>
-          </nuxt-link>s
-        </div>
-      </article> -->
-    </div>
-  </main>
+  <div class="c-article-cards">
+    <card v-for="content in contents" :key="content.id" :content="content"></card>
+  </div>
 </template>
 
 <script>
-import Headers from '~/layouts/header.vue'
+import Headers from '~/components/header.vue'
 import List from '~/components/List.vue'
 import Card from '~/components/Card.vue'
 import axios from 'axios'
@@ -50,9 +33,6 @@ export default {
 
 </script>
 
-<style lang="scss">
-.s-main {
-  width: 820px;
-}
+<style lang="scss" scoped>
 
 </style>

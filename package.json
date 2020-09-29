@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "cheerio": "^1.0.0-rc.3",
     "dayjs": "^1.8.36",
     "nuxt": "^2.0.0"
   },

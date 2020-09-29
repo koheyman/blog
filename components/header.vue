@@ -2,15 +2,15 @@
   <header class="header">
     <div class="header-inner">
       <h1 class="header-description">なんとかフロントエンドでがんばっていくブログ</h1>
-      <div class="header-title"><a href="/">HAPPY FRONTEND BLOG</a></div>
+      <div class="header-title"><a href="/">WEB FRONTEND BLOG</a></div>
       <nav class="header-nav">
         <div class="header-nav-inner">
           <ul class="header-nav-list">
             <li><a href="/">HOME</a></li>
-            <li><a href="#">Web制作</a></li>
-            <li><a href="#">Javascript</a></li>
-            <li><a href="#">WordPress</a></li>
-            <li><a href="#">Life</a></li>
+            <li><a href="/category/web">Web制作</a></li>
+            <li><a href="/category/javascript">Javascript</a></li>
+            <li><a href="/category/wordpress">WordPress</a></li>
+            <li><a href="/category/life">Life</a></li>
           </ul>
         </div>
       </nav>
@@ -35,6 +35,11 @@
   }
 }
 .header-inner {
+  padding: 0 15px;
+
+  @media #{$pc} {
+    padding: 0;
+  }
 
 }
 .header-description {
@@ -42,10 +47,16 @@
   font-weight: normal;
 }
 .header-title {
-  padding: 0 0 10px;
-  a {
-    font-size: 24px;
+  padding: 0 0 5px;
+  line-height: 1.5;
+
+a {
+    font-size: 20px;
     font-weight: bold;
+
+    @media #{$pc} {
+      font-size: 24px;
+    }
   }
 }
 .header-nav {
@@ -53,10 +64,17 @@
 }
 .header-nav-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   li {
-    margin: 0 10px;
+    margin: 0 5px;
+    font-size: 14px;
+
+     @media #{$pc} {
+       margin: 0 10px;
+       font-size: 16px;
+     }
   }
 }
 </style>
