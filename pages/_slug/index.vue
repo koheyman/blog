@@ -3,7 +3,7 @@
     <div class="category"><span>{{ category && category.name }}</span></div>
     <h1 class="title">{{ title }}</h1>
     <div class="publishedAt"><span v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
-    <div class="mainimage"><img :src="mainimage.url" alt=""></div>
+    <div class="mainimage" v-if="noimage != true"><img :src="mainimage.url" alt=""></div>
     <div class="post" v-html="body"></div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
         headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
       }
     )
-    console.log(data)
+    ///console.log(data)
     return data
   }
 }
@@ -54,17 +54,17 @@ export default {
   }
 }
 .publishedAt {
-  margin-bottom: 8px;
-  text-align: right;
+  margin-bottom: 10px;
   color: #757575;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 15px;
+  line-height: 15px;
 }
 .date {
   padding-left: 20px;
   background-size: 16px 16px;
   background-position: 0 50%;
-  // :style="{ 'background-image': 'url(/assets/img/icn/icn_calendar.svg)' }"
+  background-repeat: no-repeat;
+  background-image: url(~@/assets/img/icn/icn_calendar.svg);
 }
 .mainimage {
   img {
@@ -129,6 +129,12 @@ export default {
     background: linear-gradient(transparent 60%, #ff6 60%);
   }
 
+  /deep/ ul {
+    margin-left: 20px;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
   /deep/ pre {
     overflow: scroll;
     margin-top: 20px;
@@ -143,6 +149,12 @@ export default {
     padding: 15px;
     background: #282c34;
     color: white;
+  }
+
+  /deep/ code {
+    border-radius: 2px;
+    padding: .2rem .4rem;
+    background: #ddd;
   }
 }
 </style>

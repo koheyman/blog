@@ -4,6 +4,8 @@ const url = 'https://boring-meninsky-8e1bf1.netlify.app/'
 const ogImage = `${url}/assets/image/ogp.jpg`
 
 import axios from 'axios'
+require('dotenv').config();
+const { API_KEY } = process.env;
 
 export default {
   mode: 'universal',
@@ -49,6 +51,12 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+  privateRuntimeConfig: {
+    apiKey: API_KEY
+  },
+  publicRuntimeConfig: {
+    apiKey: process.env.NODE_ENV !== 'production' ? API_KEY : undefined
   },
   /*
   ** Customize the progress-bar color
