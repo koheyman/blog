@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="category"># {{category}}</div>
     <div class="l-wrap">
       <main class="l-main">
         <div v-if="items.length == 0" class="noitem">まだ記事がありません。</div>
@@ -40,7 +41,8 @@ export default {
     console.log(data.contents)
 
     return {
-      items: data.contents
+      items: data.contents,
+      category: params.id
     };
   }
 
@@ -50,5 +52,12 @@ export default {
 .noitem {
   margin: 50px 0;
   text-align: center;
+}
+.category {
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 1200px;
+  font-size: 24px;
+  font-weight: bold;
 }
 </style>
