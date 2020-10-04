@@ -2,7 +2,7 @@
   <aside class="s-aside">
     <section class="box">
       <h3 class="title">カテゴリー</h3>
-      <div class="sidewrap">
+      <div>
         <ul class="list">
           <li class="item"><a href="#">Web制作</a></li>
           <li class="item"><a href="#">Javascript</a></li>
@@ -14,7 +14,7 @@
 
     <section class="box">
       <h3 class="title">about me</h3>
-      <div class="sidewrap">
+      <div>
         <div class="profile">
           <div class="profile-image"><img src="~/assets/img/img_profile.jpg" /></div>
           <div class="profile-name">おいぽん</div>
@@ -32,7 +32,7 @@
 <style lang="scss" scoped>
 .s-aside {
   width: 100%;
-  padding: 0 15px;
+  padding: 20px 15px;
 
   @media #{$pc} {
     width: 340px;
@@ -63,9 +63,6 @@
     background: #63b3ed;
     content: "";
   }
-}
-.sidewrap {
-  margin-bottom: 30px;
 }
 .item {
   font-size: 14px;

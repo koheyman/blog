@@ -3,7 +3,7 @@
     <div class="footer-inner">
     </div>
     <p class="footer-copy">
-        &copy; 2020 OI TECH BLOG.
+        &copy; 2020 WEB FRONTEND BLOG.
       </p>
   </footer>
 </template>

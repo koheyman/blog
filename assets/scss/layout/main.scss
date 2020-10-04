@@ -15,18 +15,20 @@
 }
 .l-main {
   width: 100%;
+  padding: 20px;
 
   @media #{$pc} {
     width: 820px;
+    padding: 0;
   }
 
 }
 .l-article {
-  padding: 0 15px;
+  padding:  10px 20px 20px;
   background-color: #fff;
-  border-radius: 10px;
 
   @media #{$pc} {
+    border-radius: 10px;
     padding: 10px 30px;
   }
 }

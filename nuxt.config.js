@@ -1,6 +1,6 @@
-const title = 'Frontend Ganbaru Blog'
-const description = 'フロントエンドのエンジニアとしてなんとかがんばるブログ'
-const url = 'https://boring-meninsky-8e1bf1.netlify.app/'
+const title = 'WEB FRONTEND BLOG'
+const description = 'フロントエンドでなんとかがんばっていくブログ'
+const url = 'https://oi-tech.blog/'
 const ogImage = `${url}/assets/image/ogp.jpg`
 
 import axios from 'axios'
@@ -84,7 +84,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-webfontloader'
   ],
   /*
   ** Axios module configuration
@@ -110,6 +111,11 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+  webfontloader: {
+    google: {
+      families: ['Roboto:ital,wght@1,700Sans']
     }
   },
   generate: {

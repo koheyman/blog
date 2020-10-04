@@ -54,7 +54,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0 20px;
+  padding: 20px 0;
+
+  @media #{$pc} {
+    padding: 50px 0 20px;
+  }
 }
 .head-inner {
   padding: 0 20px;
@@ -66,9 +70,13 @@ export default {
   text-align: left;
   max-width: 800px;
   margin: 15px 0;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: bold;
   line-height: 1.4;
+
+  @media #{$pc} {
+    font-size: 26px;
+  }
 }
 .head-meta {
   display: flex;

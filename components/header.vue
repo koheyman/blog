@@ -1,8 +1,8 @@
 <template>
   <header class="header">
     <div class="header-inner">
-      <div class="header-title"><a href="/">OI TECH BLOG</a></div>
-      <h1 class="header-description">なんとかフロントエンドでがんばっていくブログ</h1>
+      <div class="header-title"><a href="/">WEB FRONTEND BLOG</a></div>
+      <h1 class="header-description">フロントエンドでなんとかがんばっていくブログ</h1>
       <nav class="header-nav">
         <div class="header-nav-inner">
           <ul class="header-nav-list">
