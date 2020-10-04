@@ -1,8 +1,8 @@
 <template>
   <header class="header">
     <div class="header-inner">
+      <div class="header-title"><a href="/">OI TECH BLOG</a></div>
       <h1 class="header-description">なんとかフロントエンドでがんばっていくブログ</h1>
-      <div class="header-title"><a href="/">WEB FRONTEND BLOG</a></div>
       <nav class="header-nav">
         <div class="header-nav-inner">
           <ul class="header-nav-list">
@@ -22,29 +22,29 @@
 .header {
   padding: 20px 0;
   text-align: center;
-
-  &:before {
-    position: fixed;
-    content: "";
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(96deg, #08909e, #1b79ad);
-    z-index: 11;
-  }
 }
 .header-inner {
   padding: 0 15px;
 
   @media #{$pc} {
-    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+    width: 1200px;
+    margin: 0 auto;
   }
 
 }
 .header-description {
+  display: none;
   font-size: 12px;
   font-weight: normal;
+
+  @media #{$pc} {
+    display: block;
+    margin-left: 20px;
+  }
 }
 .header-title {
   padding: 0 0 5px;
@@ -60,6 +60,10 @@ a {
   }
 }
 .header-nav {
+
+  @media #{$pc} {
+    margin-left: auto;
+  }
 
 }
 .header-nav-list {

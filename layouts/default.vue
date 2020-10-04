@@ -2,12 +2,7 @@
   <div>
     <headers />
     <div class="container">
-      <div class="wrap">
-        <main class="s-main">
           <nuxt />
-        </main>
-        <side />
-      </div>
     </div>
     <footers />
   </div>
@@ -30,7 +25,10 @@ export default {
 <style lang="scss" scoped>
 .container {
   margin: 0 auto;
+  padding-bottom: 40px;
   min-height: 100vh;
+  // background-color: #f8fafc;
+  background-color: #edf2f7;
 }
 
 .wrap {
@@ -39,7 +37,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 30px;
     width: 1200px;
   }
 }

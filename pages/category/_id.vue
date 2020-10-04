@@ -1,8 +1,13 @@
 <template>
   <div>
-    <div v-if="items.length == 0" class="noitem">まだ記事がありません。</div>
-    <div class="c-article-cards">
-      <card v-for="item in items" :key="item.id" :content="item"></card>
+    <div class="l-wrap">
+      <main class="l-main">
+        <div v-if="items.length == 0" class="noitem">まだ記事がありません。</div>
+        <div class="c-article-cards">
+          <card v-for="item in items" :key="item.id" :content="item"></card>
+        </div>
+      </main>
+      <side />
     </div>
   </div>
 </template>
@@ -10,9 +15,11 @@
 <script>
 import Card from '~/components/Card.vue'
 import axios from 'axios'
+import Side from '~/components/side.vue'
 
 export default {
   components: {
+    Side,
     Card
   },
 

@@ -1,27 +1,31 @@
 <template>
   <aside class="s-aside">
-    <h3 class="title">カテゴリー</h3>
-    <div class="sidewrap">
-      <ul class="list">
-        <li class="item"><a href="#">Web制作</a></li>
-        <li class="item"><a href="#">Javascript</a></li>
-        <li class="item"><a href="#">WordPress</a></li>
-        <li class="item"><a href="#">Life</a></li>
-      </ul>
-    </div>
+    <section class="box">
+      <h3 class="title">カテゴリー</h3>
+      <div class="sidewrap">
+        <ul class="list">
+          <li class="item"><a href="#">Web制作</a></li>
+          <li class="item"><a href="#">Javascript</a></li>
+          <li class="item"><a href="#">WordPress</a></li>
+          <li class="item"><a href="#">Life</a></li>
+        </ul>
+      </div>
+    </section>
 
-    <h3 class="title">about me</h3>
-    <div class="sidewrap">
-      <div class="profile">
-        <div class="profile-image"><img src="~/assets/img/img_profile.jpg" /></div>
-        <div class="profile-name">おいぽん</div>
-        <div class="profile-job">フロントエンドエンジニア・コーダー</div>
-        <div class="profile-overview">
-          <p>新卒で入ったシステム開発の会社から未経験でWeb業界へ。都内のweb制作会社を2社経験し事業会社へ。webサイトのフロントエンドの実装をしています。コーダーさんと呼ばれようがなんとかフロントエンドエンジニアとしてしがみ付いてがんばっていきたい。</p>
-          <p>インターネットが好きなのでインターネットになりたい。</p>
+    <section class="box">
+      <h3 class="title">about me</h3>
+      <div class="sidewrap">
+        <div class="profile">
+          <div class="profile-image"><img src="~/assets/img/img_profile.jpg" /></div>
+          <div class="profile-name">おいぽん</div>
+          <div class="profile-job">フロントエンドエンジニア・コーダー</div>
+          <div class="profile-overview">
+            <p>新卒で入ったシステム開発の会社から未経験でWeb業界へ。都内のweb制作会社を2社経験し事業会社へ。webサイトのフロントエンドの実装をしています。コーダーさんと呼ばれようがなんとかフロントエンドエンジニアとしてしがみ付いてがんばっていきたい。</p>
+            <p>インターネットが好きなのでインターネットになりたい。</p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </aside>
 </template>
 
@@ -34,6 +38,12 @@
     width: 340px;
     padding: 0;
   }
+}
+.box {
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
 }
 .title {
   position: relative;

@@ -1,6 +1,13 @@
 <template>
-  <div class="c-article-cards">
-    <card v-for="content in contents" :key="content.id" :content="content"></card>
+  <div>
+    <div class="l-wrap">
+      <main class="l-main">
+        <div class="c-article-cards">
+          <card v-for="content in contents" :key="content.id" :content="content"></card>
+        </div>
+      </main>
+      <side />
+    </div>
   </div>
 </template>
 
@@ -9,9 +16,11 @@ import Headers from '~/components/header.vue'
 import List from '~/components/List.vue'
 import Card from '~/components/Card.vue'
 import axios from 'axios'
+import Side from '~/components/side.vue'
 
 export default {
   components: {
+    Side,
     Headers,
     List,
     Card

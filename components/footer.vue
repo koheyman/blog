@@ -3,7 +3,7 @@
     <div class="footer-inner">
     </div>
     <p class="footer-copy">
-        &copy; 2020 OIPON FRONTEND BLOG.
+        &copy; 2020 OI TECH BLOG.
       </p>
   </footer>
 </template>
@@ -13,16 +13,16 @@
   padding: 20px 0;
   text-align: center;
 
-  &:before {
-    position: fixed;
-    content: "";
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(96deg, #08909e, #1b79ad);
-    z-index: 11;
-  }
+  // &:before {
+  //   position: fixed;
+  //   content: "";
+  //   top: 0;
+  //   display: block;
+  //   width: 100%;
+  //   height: 3px;
+  //   background: linear-gradient(96deg, #08909e, #1b79ad);
+  //   z-index: 11;
+  // }
 }
 .header-inner {
 

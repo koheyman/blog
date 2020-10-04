@@ -1,20 +1,33 @@
 <template>
   <div>
-    <div class="category"><span>{{ category && category.name }}</span></div>
-    <h1 class="title">{{ title }}</h1>
-    <div class="publishedAt"><span v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
-    <div class="mainimage" v-if="noimage != true"><img :src="mainimage.url" alt=""></div>
-    <div class="post" v-html="body"></div>
+    <div class="head">
+      <div class="head-inner">
+        <h1 class="title">{{ title }}</h1>
+        <div class="head-meta">
+          <div class="category"><span>{{ category && category.name }}</span></div>
+          <div class="publishedAt"><span v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="l-wrap">
+      <main class="l-main l-article">
+        <div class="mainimage" v-if="noimage != true"><img :src="mainimage.url" alt=""></div>
+        <div class="post" v-html="body"></div>
+      </main>
+      <side />
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import cheerio from 'cheerio'
 import Headers from '~/components/header.vue'
+import Side from '~/components/side.vue'
+
 
 export default {
   components: {
+    Side,
     Headers
   },
   async asyncData({ params }) {
@@ -37,13 +50,33 @@ export default {
   padding-top: 20px;
   width: 1200px;
 }
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 20px;
+}
+.head-inner {
+  padding: 0 20px;
+  width: 1000px;
+  text-align: center;
+}
 .title {
+  display: inline-block;
+  text-align: left;
+  max-width: 800px;
   margin: 15px 0;
   font-size: 26px;
   font-weight: bold;
   line-height: 1.4;
 }
+.head-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .category {
+  margin: 0 10px;
   span {
     border-radius: 10px;
     padding: 5px 10px;
@@ -54,7 +87,7 @@ export default {
   }
 }
 .publishedAt {
-  margin-bottom: 10px;
+  margin: 0 10px;
   color: #757575;
   font-size: 15px;
   line-height: 15px;
