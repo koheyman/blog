@@ -47,11 +47,13 @@
   }
 }
 .header-title {
-  padding: 0 0 5px;
+  padding: 0;
   line-height: 1.5;
 
 a {
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    font-style: italic;
     font-weight: bold;
 
     @media #{$pc} {
