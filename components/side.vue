@@ -4,10 +4,10 @@
       <h3 class="title">カテゴリー</h3>
       <div>
         <ul class="list">
-          <li class="item"><a href="#">Web制作</a></li>
-          <li class="item"><a href="#">Javascript</a></li>
-          <li class="item"><a href="#">WordPress</a></li>
-          <li class="item"><a href="#">Life</a></li>
+          <li class="item"><a href="/category/web">Web制作</a></li>
+          <li class="item"><a href="/category/javascript">Javascript</a></li>
+          <li class="item"><a href="/category/wordpress">WordPress</a></li>
+          <li class="item"><a href="/category/life">Life</a></li>
         </ul>
       </div>
     </section>
