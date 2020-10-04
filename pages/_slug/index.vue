@@ -2,9 +2,8 @@
   <div>
     <div class="head">
       <div class="head-inner">
-        <h1 class="title">{{ title }}</h1>
+        <h1 class="title"><span class="category"><span>{{ category && category.name }}</span></span>{{ title }}</h1>
         <div class="head-meta">
-          <div class="category"><span>{{ category && category.name }}</span></div>
           <div class="publishedAt"><span v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
         </div>
       </div>
@@ -69,7 +68,7 @@ export default {
   display: inline-block;
   text-align: left;
   max-width: 800px;
-  margin: 15px 0;
+  margin: 0 0 20px;
   font-size: 22px;
   font-weight: bold;
   line-height: 1.4;
@@ -78,21 +77,25 @@ export default {
     font-size: 26px;
   }
 }
+.category {
+  display: block;
+  margin-bottom: 15px;
+  line-height: 1;
+
+  span {
+    border-radius: 14px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #00c58e;
+    background-color: #63b3ed;
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
 .head-meta {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.category {
-  margin: 0 10px;
-  span {
-    border-radius: 10px;
-    padding: 5px 10px;
-    color: #fff;
-    background-color: #00c58e;
-    font-size: 13px;
-    line-height: 13px;
-  }
 }
 .publishedAt {
   margin: 0 10px;

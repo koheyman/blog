@@ -29,6 +29,7 @@ export default {
   min-height: 100vh;
   // background-color: #f8fafc;
   background-color: #edf2f7;
+  background-color: #edf2f7;
 }
 
 .wrap {
