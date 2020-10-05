@@ -25,7 +25,7 @@ export default {
     List,
     Card
   },
-  async asyncData() {
+  async asyncData({$config}) {
     const { data } = await axios.get(
       'https://oipon.microcms.io/api/v1/posts',
       {

@@ -49,7 +49,7 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', moduleshref: '/favicon.ico' }
     ]
   },
   privateRuntimeConfig: {
@@ -89,7 +89,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Axios module configuration

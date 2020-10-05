@@ -30,10 +30,11 @@ export default {
     Headers
   },
   async asyncData({ $config, params }) {
+    console.log($config)
     const { data } = await axios.get(
       `https://oipon.microcms.io/api/v1/posts/${params.slug}`,
       {
-        headers: { 'X-API-KEY': $config.apiKey }
+        headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
       }
     )
     ///console.log(data)
