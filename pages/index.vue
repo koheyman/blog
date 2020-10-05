@@ -25,16 +25,14 @@ export default {
     List,
     Card
   },
-  async asyncData() {
+  async asyncData({$config}) {
     const { data } = await axios.get(
-      // your-service-id部分は自分のサービスidに置き換えてください
       'https://oipon.microcms.io/api/v1/posts',
       {
-        // your-api-key部分は自分のapi-keyに置き換えてください
-        headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
+        headers: { 'X-API-KEY': $config.apiKey }
       }
     )
-    console.log(data)
+    // console.log(data)
     return data
   }
 
