@@ -59,6 +59,11 @@ a {
     font-size: 20px;
     font-style: italic;
     font-weight: bold;
+    padding-left: 42px;
+    background-size: 30px 30px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-image: url(~@/assets/img/icn/icn_fro.svg);
 
     @media #{$pc} {
       font-size: 24px;
