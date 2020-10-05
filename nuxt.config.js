@@ -118,6 +118,9 @@ export default {
     extend (config, ctx) {
     }
   },
+  env: {
+    API_KEY
+  },
   webfontloader: {
     google: {
       families: ['Roboto:ital,wght@1,700Sans']

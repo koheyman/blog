@@ -36,7 +36,7 @@ export default {
     const { data } = await axios.get(
       `https://oipon.microcms.io/api/v1/posts?filters=category[equals]${params.id}`,
       {
-        headers: { 'X-API-KEY': $config.apiKey }
+        headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
       }
     );
     // console.log(data.contents)
@@ -55,10 +55,13 @@ export default {
   text-align: center;
 }
 .category {
-  margin: 0 auto;
   padding-top: 20px;
-  width: 1200px;
   font-size: 24px;
   font-weight: bold;
+
+  @media #{$pc} {
+    margin: 0 auto;
+    width: 1200px;
+  }
 }
 </style>
