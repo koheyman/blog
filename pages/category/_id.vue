@@ -55,7 +55,7 @@ export default {
   text-align: center;
 }
 .category {
-  padding-top: 20px;
+  padding: 20px 20px 0;
   font-size: 24px;
   font-weight: bold;
 
