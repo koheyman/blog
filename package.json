@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "webserver": "http-server ./dist -o -p 8080"
+    "server": "http-server ./dist -o -p 8080"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
