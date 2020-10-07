@@ -36,7 +36,7 @@ export default {
     const { data } = await axios.get(
       `https://oipon.microcms.io/api/v1/posts?filters=category[equals]${params.id}`,
       {
-        headers: { 'X-API-KEY': $config.apiKey  }
+        headers: { 'X-API-KEY': process.env.API_KEY }
       }
     );
     // console.log(data.contents)
