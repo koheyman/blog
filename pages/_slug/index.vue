@@ -22,7 +22,9 @@
 import axios from 'axios'
 import Headers from '~/components/header.vue'
 import Side from '~/components/side.vue'
-
+import cheerio from 'cheerio'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/hybrid.css'
 
 export default {
   components: {
@@ -36,7 +38,16 @@ export default {
         headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
       }
     )
-    return data
+    const $ = cheerio.load(data.body)
+    $('pre code').each((_, elm) => {
+      const result = hljs.highlightAuto($(elm).text())
+      $(elm).html(result.value)
+      $(elm).addClass('hljs')
+    })
+    return {
+      ...data,
+      body: $.html()
+    }
   }
 }
 </script>
