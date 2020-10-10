@@ -55,15 +55,29 @@
   }
 
 a {
+    position: relative;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-style: italic;
     font-weight: bold;
     padding-left: 42px;
-    background-size: 30px 30px;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-    background-image: url(~@/assets/img/icn/icn_fro.svg);
+    // background-size: 30px 30px;
+    // background-position: 0 50%;
+    // background-repeat: no-repeat;
+    // background-image: url(~@/assets/img/icn/icn_fro.svg);
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: calc(50% - 15px);
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background: #0fc9f7;
+      // background: linear-gradient(45deg, #2574eb 0%, #0fc9f7 50%, #63b3ed 100%);
+      background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+      border-radius: 100%;
+    }
 
     @media #{$pc} {
       font-size: 24px;
