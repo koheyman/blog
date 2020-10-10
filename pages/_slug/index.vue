@@ -9,9 +9,12 @@
       </div>
     </div>
     <div class="l-wrap">
-      <main class="l-main l-article">
-        <div class="mainimage" v-if="noimage != true"><img :src="mainimage.url" alt=""></div>
-        <div class="post" v-html="body"></div>
+      <main class="l-main">
+        <div class=" l-article">
+          <div class="mainimage" v-if="noimage != true"><img :src="mainimage.url" alt=""></div>
+          <div class="post" v-html="body"></div>
+        </div>
+        <share :title="title" />
       </main>
       <side />
     </div>
@@ -22,6 +25,7 @@
 import axios from 'axios'
 import Headers from '~/components/header.vue'
 import Side from '~/components/side.vue'
+import Share from '~/components/share.vue'
 import cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/hybrid.css'
@@ -29,6 +33,7 @@ import 'highlight.js/styles/hybrid.css'
 export default {
   components: {
     Side,
+    Share,
     Headers
   },
   async asyncData({ $config, params }) {
