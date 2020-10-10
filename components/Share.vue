@@ -114,7 +114,7 @@ export default {
   flex-grow: 1;
   height: 36px;
   line-height: 36px;
-  min-width: 90px;
+  min-width: 50px;
   text-align: center;
   margin: 0 5px;
 }
@@ -135,9 +135,6 @@ export default {
   background: #fff;
   border: 1px solid #eb4654;
 }
-/* .social-list-link.icon-line {
-  background: #00c300;
-} */
 .social-list-link {
   display: flex;
   justify-content: center;
