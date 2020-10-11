@@ -74,8 +74,12 @@ a {
       width: 30px;
       height: 30px;
       background: #0fc9f7;
-      // background: linear-gradient(45deg, #2574eb 0%, #0fc9f7 50%, #63b3ed 100%);
-      background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+      // background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+      background-image: linear-gradient(45deg, #005bea 0%, #00f2fe 100%);
+      // background-image: linear-gradient(90deg, #00c6fb 0%, #005bea 100%);
+
+
+
       border-radius: 100%;
     }
 
@@ -103,6 +107,29 @@ a {
      @media #{$pc} {
        margin: 0 10px;
        font-size: 16px;
+
+       a {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          bottom: -12px;
+          left: 0;
+          background-color: #4facfe;
+          width: 100%;
+          height: 2px;
+          transform: scaleX(0);
+          transition: transform .25s,width .25s,height .25s,-webkit-transform .25s;
+        }
+
+        &:hover {
+          &::after {
+            transform: scaleX(1);
+            transition: transform .25s,width .25s,height .25s,-webkit-transform .25s;
+          }
+        }
+       }
      }
   }
 }
