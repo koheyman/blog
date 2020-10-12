@@ -61,8 +61,8 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#63b3ed' },
-  // loading: false,
+  // loading: { color: '#63b3ed' },
+  loading: false,
   /*
   ** Global CSS
   */
