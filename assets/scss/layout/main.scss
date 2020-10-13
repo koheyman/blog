@@ -27,6 +27,11 @@
   padding:  10px 20px 20px;
   background-color: #fff;
 
+  @media #{$sp} {
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+  }
+
   @media #{$pc} {
     border-radius: 10px;
     padding: 10px 30px 30px;
