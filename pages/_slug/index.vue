@@ -12,6 +12,18 @@
       <main class="l-main">
         <div class=" l-article">
           <div class="mainimage" v-if="noimage != true"><img :src="mainimage.url" alt=""></div>
+          <div class="toc">
+            <div class="toc_inner">
+              <div class="toc_title">Contents</div>
+              <ul class="toc_list">
+                <li :class="`toc_item ${item.name}`" v-for="item in toc" :key="item.id">
+                  <n-link v-scroll-to="`#${item.id}`" to>
+                    {{ item.text }}
+                  </n-link>
+                </li>
+              </ul>
+            </div>
+          </div>
           <div class="post" v-html="body"></div>
         </div>
         <share :title="title" />
@@ -49,8 +61,15 @@ export default {
       $(elm).html(result.value)
       $(elm).addClass('hljs')
     })
+    const headings = $('h1, h2, h3').toArray()
+    const toc = headings.map(data => ({
+      text: data.children[0].data,
+      id: data.attribs.id,
+      name: data.name
+    }))
     return {
       ...data,
+      toc,
       body: $.html()
     }
   }
@@ -130,6 +149,50 @@ export default {
     width: 100%;
     height: auto;
     max-width: 100%;
+  }
+}
+.toc {
+  padding: 0;
+
+  @media #{$pc} {
+    padding: 0 40px;
+  }
+}
+.toc_inner {
+  margin: 2em 0;
+  border-top: 4px solid #b0d3f9;
+  padding: 15px;
+  background-color: #f9f9f9;
+
+  @media #{$pc} {
+    padding: 20px 30px;
+  }
+}
+.toc_title {
+  margin-bottom: 10px;
+  font-weight: bold;
+
+  @media #{$pc} {
+    margin-bottom: 20px;
+  }
+}
+.toc_list {
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 18px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: calc(50% - 3px);
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background-color: #b0d3f9;
+      border-radius: 3px;
+    }
   }
 }
 
