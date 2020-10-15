@@ -156,7 +156,7 @@ a {
   background-size: 20px 20px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(~@/assets/img/icn/icn_facebook_logo_blue.svg);
+  background-image: url(~@/assets/img/icn/icn_facebook_logo_blue.svg?inline);
 }
 .twitter {
   width: 100%;
@@ -164,7 +164,7 @@ a {
   background-size: 30px 30px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(~@/assets/img/icn/icn_twitter_logo_blue.svg);
+  background-image: url(~@/assets/img/icn/icn_twitter_logo_blue.svg?inline);
 }
 .pocket {
   width: 100%;
@@ -172,6 +172,6 @@ a {
   background-size: 20px 20px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(~@/assets/img/icn/icn_pocket_logo.svg);
+  background-image: url(~@/assets/img/icn/icn_pocket_logo.svg?inline);
 }
 </style>

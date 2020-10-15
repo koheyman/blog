@@ -14,7 +14,7 @@
           <div class="mainimage" v-if="noimage != true"><img :src="mainimage.url" alt=""></div>
           <div class="toc">
             <div class="toc_inner">
-              <div class="toc_title">Contents</div>
+              <div class="toc_title"><span class="toc_icn"><ListIcon /></span>Contents</div>
               <ul class="toc_list">
                 <li :class="`toc_item ${item.name}`" v-for="item in toc" :key="item.id">
                   <n-link v-scroll-to="`#${item.id}`" to>
@@ -41,11 +41,13 @@ import Share from '~/components/share.vue'
 import cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/hybrid.css'
+import ListIcon from '@/assets/img/icn/icn_list.svg'
 
 export default {
   components: {
     Side,
     Share,
+    ListIcon,
     Headers
   },
   async asyncData({ $config, params }) {
@@ -142,7 +144,7 @@ export default {
   background-size: 16px 16px;
   background-position: 0 50%;
   background-repeat: no-repeat;
-  background-image: url(~@/assets/img/icn/icn_calendar.svg);
+  background-image: url(~@/assets/img/icn/icn_calendar.svg?inline);
 }
 .mainimage {
   img {
@@ -169,6 +171,8 @@ export default {
   }
 }
 .toc_title {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
   font-weight: bold;
 
@@ -181,18 +185,34 @@ export default {
 
   li {
     position: relative;
-    padding-left: 18px;
+    padding-left: 30px;
 
     &::before {
       position: absolute;
       content: '';
       top: calc(50% - 3px);
-      left: 0;
+      left: 10px;
       width: 6px;
       height: 6px;
       background-color: #b0d3f9;
       border-radius: 3px;
     }
+  }
+}
+.toc_icn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #b0d3f9;
+  color: #fff;
+
+  /deep/ svg {
+    width: 20px;
+    height: 20px;
   }
 }
 

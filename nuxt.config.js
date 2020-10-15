@@ -90,7 +90,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     'nuxt-webfontloader',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-svg-loader'
   ],
   /*
   ** Axios module configuration
