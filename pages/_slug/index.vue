@@ -4,7 +4,7 @@
       <div class="head-inner">
         <h1 class="title"><span class="category"><span>{{ category && category.name }}</span></span>{{ title }}</h1>
         <div class="head-meta">
-          <div class="publishedAt"><span v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
+          <div class="publishedAt"><CalendarIcon /><span v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
         </div>
       </div>
     </div>
@@ -42,12 +42,14 @@ import cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/hybrid.css'
 import ListIcon from '@/assets/img/icn/icn_list.svg'
+import CalendarIcon from '@/assets/img/icn/icn_calendar.svg'
 
 export default {
   components: {
     Side,
     Share,
     ListIcon,
+    CalendarIcon,
     Headers
   },
   async asyncData({ $config, params }) {
@@ -134,17 +136,20 @@ export default {
   align-items: center;
 }
 .publishedAt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 10px;
   color: #757575;
   font-size: 15px;
   line-height: 15px;
 }
 .date {
-  padding-left: 20px;
+  padding-left: 7px;
   background-size: 16px 16px;
   background-position: 0 50%;
   background-repeat: no-repeat;
-  background-image: url(~@/assets/img/icn/icn_calendar.svg?inline);
+  color: #757575;
 }
 .mainimage {
   img {

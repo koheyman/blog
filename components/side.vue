@@ -19,7 +19,7 @@
           <div class="profile-image"><img src="~/assets/img/img_profile.jpg" /></div>
           <div class="profile-name">おいぽん</div>
           <div class="profile-job">フロントエンドエンジニア・コーダー</div>
-          <div class="profile-sns"><a href="https://twitter.com/oiponcom" target="blank"><img src="@/assets/img/icn/icn_twitter_logo_blue.svg" alt="twitterでおいぽんをフォローする"></a></div>
+          <div class="profile-sns"><a href="https://twitter.com/oiponcom" target="blank"><TwitterIcon /></a></div>
           <div class="profile-overview">
             <p>新卒で入ったシステム開発の会社から未経験でWeb業界へ。都内のweb制作会社を2社経験し事業会社へ。webサイトのフロントエンドの実装をしています。コーダーさんと呼ばれようがなんとかフロントエンドエンジニアとしてしがみ付いてがんばっていきたい。</p>
             <p>インターネットが好きなのでインターネットになりたい。</p>
@@ -29,6 +29,17 @@
     </section>
   </aside>
 </template>
+
+<script>
+import TwitterIcon from '@/assets/img/icn/icn_twitter_logo_blue.svg'
+
+export default {
+  components: {
+    TwitterIcon
+  }
+}
+
+</script>
 
 <style lang="scss" scoped>
 .s-aside {
@@ -93,7 +104,7 @@
   display: flex;
   justify-content: center;
 
-  img {
+  svg {
     width: 30px;
     height: 30px;
   }
