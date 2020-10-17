@@ -26,6 +26,7 @@ export default {
     Card
   },
   async asyncData({$config}) {
+    console.log(process.env.NODE_ENV);
     const { data } = await axios.get(
       'https://oipon.microcms.io/api/v1/posts',
       {

@@ -167,7 +167,7 @@ a {
   background-size: 30px 30px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(~@/assets/img/icn/icn_twitter_logo_blue.svg?inline);
+  background-image: url(~@/assets/img/icn/icn_twitter_logo_white.svg?inline);
 }
 .pocket {
   width: 100%;
