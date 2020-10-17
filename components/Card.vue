@@ -12,6 +12,10 @@
                 <CalendarIcon />
                 <span class="c-article-card__date" v-text="$dayjs(`${Content.publishedAt}`).format('YYYY/MM/DD')"></span>
               </div>
+              <div class="updatedAt">
+                <UpdateIcon />
+                <span class="c-article-card__date" v-text="$dayjs(`${Content.updatedAt}`).format('YYYY/MM/DD')"></span>
+              </div>
             </div>
             <div class="c-article-card__title"><h2>{{ Content.title }}</h2></div>
         </div>
@@ -21,10 +25,12 @@
 </template>
 <script>
 import CalendarIcon from '@/assets/img/icn/icn_calendar.svg'
+import UpdateIcon from '@/assets/img/icn/icn_update.svg'
 
 export default {
   components: {
-    CalendarIcon
+    CalendarIcon,
+    UpdateIcon
   },
   props:{
     Content: {
@@ -34,6 +40,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .publishedAt {
+  display: flex;
+  align-items: center;
+  color: #757575;
+  font-size: 15px;
+  line-height: 15px;
+}
+.updatedAt {
   display: flex;
   align-items: center;
   color: #757575;

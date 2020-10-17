@@ -49,8 +49,8 @@
 .c-article-card__head {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: auto 1fr;
-  grid-gap: 20px;
+  grid-template-columns: auto auto 1fr;
+  grid-gap: 15px;
 }
 .c-article-card__date {
   grid-row: 1 / 2;

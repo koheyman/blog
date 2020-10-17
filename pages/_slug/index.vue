@@ -5,6 +5,7 @@
         <h1 class="title"><span class="category"><span>{{ category && category.name }}</span></span>{{ title }}</h1>
         <div class="head-meta">
           <div class="publishedAt"><CalendarIcon /><span v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
+          <div class="updatedAt"><UpdateIcon /><span v-text="$dayjs(`${updatedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
         </div>
       </div>
     </div>
@@ -43,6 +44,7 @@ import hljs from 'highlight.js'
 import 'highlight.js/styles/hybrid.css'
 import ListIcon from '@/assets/img/icn/icn_list.svg'
 import CalendarIcon from '@/assets/img/icn/icn_calendar.svg'
+import UpdateIcon from '@/assets/img/icn/icn_update.svg'
 
 export default {
   components: {
@@ -50,6 +52,7 @@ export default {
     Share,
     ListIcon,
     CalendarIcon,
+    UpdateIcon,
     Headers
   },
   async asyncData({ $config, params }) {
@@ -135,7 +138,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.publishedAt {
+.publishedAt, .updatedAt {
   display: flex;
   justify-content: center;
   align-items: center;
