@@ -104,41 +104,44 @@ export default {
 .social-list {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   margin: auto;
 }
 
 .social-list-item {
-  flex-grow: 1;
   height: 36px;
   line-height: 36px;
-  min-width: 50px;
+  min-width: 36px;
   text-align: center;
   margin: 0 5px;
 }
 .social-list-link.icon-facebook {
   background: #fff;
-  border: 1px solid #1da1f2;
+  border: 1px solid #1877f2;
 }
 .social-list-link.icon-twitter {
   background: #fff;
   border: 1px solid #1da1f2;
+  background-color: #1da1f2;
 }
 .social-list-link.icon-hatebu {
   background: #fff;
   border: 1px solid #008fde;
-  color: #008fde;
+  background-color: #008fde;
+  color: #fff;
 }
 .social-list-link.icon-pocket {
   background: #fff;
-  border: 1px solid #eb4654;
+  border: 1px solid #EF4056;
+  background-color: #EF4056;
 }
 .social-list-link {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 18px;
   color: #ffffff;
 }
 a {
@@ -153,7 +156,7 @@ a {
 .facebook {
   width: 100%;
   height: 100%;
-  background-size: 20px 20px;
+  background-size: 36px 36px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-image: url(~@/assets/img/icn/icn_facebook_logo_blue.svg?inline);
