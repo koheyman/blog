@@ -13,7 +13,6 @@
 
 <script>
 import Headers from '~/components/header.vue'
-import List from '~/components/List.vue'
 import Card from '~/components/Card.vue'
 import axios from 'axios'
 import Side from '~/components/side.vue'
@@ -22,7 +21,6 @@ export default {
   components: {
     Side,
     Headers,
-    List,
     Card
   },
   async asyncData({$config}) {
