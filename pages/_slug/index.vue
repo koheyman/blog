@@ -306,5 +306,12 @@ export default {
     padding: .2rem .4rem;
     background: #ddd;
   }
+
+  /deep/ img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+  }
 }
 </style>
