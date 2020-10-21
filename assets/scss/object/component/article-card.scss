@@ -28,6 +28,7 @@
 }
 .c-article-card__thumb {
   overflow: hidden;
+  padding: 15px 15px 0;
   width: 100%;
   height: auto;
 
@@ -35,11 +36,10 @@
     width: 100%;
     height: auto;
     max-width: 390px;
-    border-radius: 10px 10px 0 0;
   }
 
   @media #{$pc} {
-    width: 390px;
+    width: 395px;
     height: 205px;
   }
 }
