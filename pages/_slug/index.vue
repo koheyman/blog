@@ -5,7 +5,7 @@
         <h1 class="title"><span class="category"><span>{{ category && category.name }}</span></span>{{ title }}</h1>
         <div class="head-meta">
           <div class="publishedAt"><CalendarIcon /><span v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
-          <div class="updatedAt"><UpdateIcon /><span v-text="$dayjs(`${updatedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
+          <div class="updatedAt" v-if="publishedAt != updatedAt"><UpdateIcon /><span v-text="$dayjs(`${updatedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
         </div>
       </div>
     </div>

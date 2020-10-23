@@ -12,7 +12,7 @@
                 <CalendarIcon />
                 <span class="c-article-card__date" v-text="$dayjs(`${Content.publishedAt}`).format('YYYY/MM/DD')"></span>
               </div>
-              <div class="updatedAt">
+              <div class="updatedAt" v-if="Content.publishedAt != Content.updatedAt">
                 <UpdateIcon />
                 <span class="c-article-card__date" v-text="$dayjs(`${Content.updatedAt}`).format('YYYY/MM/DD')"></span>
               </div>
