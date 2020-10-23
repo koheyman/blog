@@ -169,12 +169,13 @@ export default {
   }
 }
 .toc_inner {
-  margin: 2em 0;
+  margin: 3em 0;
   border-top: 4px solid #b0d3f9;
   padding: 15px;
   background-color: #f9f9f9;
 
   @media #{$pc} {
+    margin: 5em 0;
     padding: 20px 30px;
   }
 }
