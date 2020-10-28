@@ -24,7 +24,6 @@
             <p>新卒で入ったシステム開発の会社から未経験でWeb業界へ。都内のweb制作会社を2社経験し事業会社へ。webサイトのフロントエンドの実装をしています。コーダーさんと呼ばれようがなんとかフロントエンドエンジニアとしてしがみ付いてがんばっていきたい。</p>
             <p>インターネットが好きなのでインターネットになりたい。</p>
           </div>
-          <div class="none"><img src="~/assets/img/ogp.png" /></div>
         </div>
       </div>
     </section>
@@ -118,8 +117,5 @@ export default {
   p {
     margin-bottom: 10px;
   }
-}
-.none {
-  display: none;
 }
 </style>
