@@ -1,7 +1,7 @@
 const title = 'WEB FRONTEND BLOG'
 const description = 'フロントエンドでなんとかがんばっていくブログ'
 const url = 'https://oi-tech.blog/'
-const ogImage = `${url}_nuxt/img/ogp.d0607f9.png`
+const ogImage = `${url}static/ogp.png`
 
 import axios from 'axios'
 require('dotenv').config();
