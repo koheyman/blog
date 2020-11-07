@@ -45,7 +45,7 @@ import 'highlight.js/styles/hybrid.css'
 import ListIcon from '@/assets/img/icn/icn_list.svg'
 import CalendarIcon from '@/assets/img/icn/icn_calendar.svg'
 import UpdateIcon from '@/assets/img/icn/icn_update.svg'
-import Meta from '~/mixins/meta'
+// import Meta from '~/mixins/meta'
 
 export default {
   components: {
