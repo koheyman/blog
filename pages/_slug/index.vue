@@ -45,6 +45,7 @@ import 'highlight.js/styles/hybrid.css'
 import ListIcon from '@/assets/img/icn/icn_list.svg'
 import CalendarIcon from '@/assets/img/icn/icn_calendar.svg'
 import UpdateIcon from '@/assets/img/icn/icn_update.svg'
+import Meta from '~/mixins/meta'
 
 export default {
   components: {
@@ -55,6 +56,15 @@ export default {
     UpdateIcon,
     Headers
   },
+  // mixins: [Meta],
+  // data: () => ({
+  //   meta: {
+  //     title: this.pagetitle,
+  //     description: '{料金ページの説明}',
+  //     path: '/price/',
+  //     ogImage: '{料金ページのOGP画像のパス}'
+  //   }
+  // }),
   async asyncData({ $config, params }) {
     const { data } = await axios.get(
       `https://oipon.microcms.io/api/v1/posts/${params.slug}`,
@@ -78,6 +88,31 @@ export default {
       ...data,
       toc,
       body: $.html()
+    }
+  },
+  head(){
+    const title = this.title ? `${this.title} - WEB FRONTEND BLOG` : 'WEB FRONTEND BLOG'
+    const url = `https://oi-tech.blog/${this.id}`
+    return {
+      meta: [
+        //{ name: 'description', content: description },
+        { hid: 'ogType', property: 'og:type', content: 'article' },
+        { hid: 'ogTitle', pproperty: 'og:title', content: title },
+        ///{ property: 'og:description', content: description },
+        { hid: 'ogUrl', property: 'og:url', content: url },
+        { hid: 'ogImage', property: 'og:image', content: this.mainimage.url },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@oiponcom' },
+        { name: 'twitter:creator', content: '@oiponcom' },
+        { hid: 'twitterSite', name: 'twitter:site', content: title },
+        { hid: 'twitterUrl', name: 'twitter:url', content: url },
+        { hid: 'twitterTitle', name: 'twitter:title', content: title },        
+        {
+          hid: 'twitterImage',
+          name: 'twitter:image:src',
+          content: this.mainimage.url
+        }
+      ]
     }
   }
 }
