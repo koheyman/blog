@@ -101,10 +101,6 @@ export default {
         ///{ property: 'og:description', content: description },
         { hid: 'ogUrl', property: 'og:url', content: url },
         { hid: 'ogImage', property: 'og:image', content: this.mainimage.url },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '@oiponcom' },
-        { name: 'twitter:creator', content: '@oiponcom' },
-        { hid: 'twitterSite', name: 'twitter:site', content: title },
         { hid: 'twitterUrl', name: 'twitter:url', content: url },
         { hid: 'twitterTitle', name: 'twitter:title', content: title },        
         {

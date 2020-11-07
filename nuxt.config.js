@@ -34,7 +34,8 @@ export default {
         content: description
       },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { hid: 'twitterSite', name: 'twitter:site', content: title },
+      { hid: 'twitterCreator', name: 'twitter:creator', content: '@oiponcom' },
+      { hid: 'twitterSite', name: 'twitter:site', content: '@oiponcom' },
       { hid: 'twitterUrl', name: 'twitter:url', content: url },
       { hid: 'twitterTitle', name: 'twitter:title', content: title },
       {
