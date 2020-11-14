@@ -1,4 +1,4 @@
-const title = 'WEB FRONTEND BLOG'
+const title = 'WEB FRONTEND BLOG｜フロントエンドでなんとかがんばっていくブログ'
 const description = 'フロントエンドでなんとかがんばっていくブログ'
 const url = 'https://oi-tech.blog/'
 const ogImage = `${url}ogp.png`
