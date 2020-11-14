@@ -47,7 +47,8 @@ export default {
         hid: 'twitterImage',
         name: 'twitter:image:src',
         content: ogImage
-      }
+      },
+      {name: 'google-site-verification', content:'ZRE2-20MjmbIIXoKqmZ7bTFyQMRF-rw8LTGKVvIFTt4'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', moduleshref: '/favicon.ico' }
