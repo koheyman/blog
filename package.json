@@ -14,6 +14,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/sitemap": "^2.4.0",
     "cheerio": "^1.0.0-rc.3",
     "dayjs": "^1.8.36",
     "highlight.js": "^10.2.1",

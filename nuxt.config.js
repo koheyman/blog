@@ -2,6 +2,7 @@ const title = 'WEB FRONTEND BLOG｜フロントエンドでなんとかがんば
 const description = 'フロントエンドでなんとかがんばっていくブログ'
 const url = 'https://oi-tech.blog/'
 const ogImage = `${url}ogp.png`
+const microcmsEndpoint = "https://oipon.microcms.io/api/v1"
 
 import axios from 'axios'
 require('dotenv').config();
@@ -93,8 +94,29 @@ export default {
     '@nuxtjs/style-resources',
     'nuxt-webfontloader',
     '@nuxtjs/dotenv',
-    'nuxt-svg-loader'
+    'nuxt-svg-loader',
+    '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: 'https://oi-tech.blog',
+    exclude: ["/403", "/about"], // 除外したいパスを適宜指定
+    routes(callback) {
+      const limitation = 100
+      // /content といパス名で記事やコンテンツリストを管理をしていた場合
+      axios
+        .get(`${microcmsEndpoint}/posts?limit=${limitation}`, {
+          headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' },
+        })
+        .then((res) => {
+          const routes = res.data.contents.map((content) => {
+            return `/${content.id}`
+          })
+          callback(null, routes)
+        })
+        .catch(callback)
+    },
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
