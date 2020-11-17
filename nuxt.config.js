@@ -2,7 +2,7 @@ const title = 'WEB FRONTEND BLOG｜フロントエンドでなんとかがんば
 const description = 'フロントエンドでなんとかがんばっていくブログ'
 const url = 'https://oi-tech.blog/'
 const ogImage = `${url}ogp.png`
-const microcmsEndpoint = "https://oipon.microcms.io/api/v1"
+const apiEndpoint = "https://oipon.microcms.io/api/v1"
 
 import axios from 'axios'
 require('dotenv').config();
@@ -99,13 +99,12 @@ export default {
   ],
   sitemap: {
     path: "/sitemap.xml",
-    hostname: 'https://oi-tech.blog',
-    exclude: ["/403", "/about"], // 除外したいパスを適宜指定
+    hostname: url,
+    exclude: ["/404"],
     routes(callback) {
       const limitation = 100
-      // /content といパス名で記事やコンテンツリストを管理をしていた場合
       axios
-        .get(`${microcmsEndpoint}/posts?limit=${limitation}`, {
+        .get(`${apiEndpoint}/posts?limit=${limitation}`, {
           headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' },
         })
         .then((res) => {
@@ -154,7 +153,7 @@ export default {
   generate: {
     async routes() {
       const pages = await axios
-        .get('https://oipon.microcms.io/api/v1/posts?limit=100', {
+        .get(`${apiEndpoint}/posts?limit=100`, {
           headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
         })
         .then((res) =>
@@ -164,7 +163,7 @@ export default {
           }))
         )
       const categories = await axios
-        .get("https://oipon.microcms.io/api/v1/categories", {
+        .get(`${apiEndpoint}/categories`, {
           headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
         })
         .then(res => {
