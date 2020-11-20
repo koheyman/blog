@@ -97,7 +97,8 @@ export default {
     'nuxt-svg-loader',
     '@nuxtjs/sitemap',
     ['@nuxtjs/google-adsense', {
-      id: process.env.GA_ADSENSE_ID,
+      id: 'ca-pub-6016905203546906',
+      // id: process.env.GA_ADSENSE_ID,
       pageLevelAds: true
       // analyticsUacct: process.env.GA_TRACKING_ID, // アナリティクスと連携する場合のみ必要
       // analyticsDomainName: domain                 // アナリティクスと連携する場合のみ必要
