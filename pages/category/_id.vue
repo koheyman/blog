@@ -30,21 +30,25 @@ export default {
     };
   },
 
-  async asyncData({ $config, params }) {
-    // console.log(params)
-    // console.log($config)
-    const { data } = await axios.get(
-      `https://oipon.microcms.io/api/v1/posts?filters=category[equals]${params.id}`,
-      {
-        headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
-      }
-    );
-    // console.log(data.contents)
+  async asyncData({ $config, params, error }) {
+    try {
+      const { data } = await axios.get(
+        `https://oipon.microcms.io/api/v1/posts?filters=category[equals]${params.id}`,
+        {
+          headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
+        }
+      );
 
-    return {
-      items: data.contents,
-      category: params.id
-    };
+      return {
+        items: data.contents,
+        category: params.id
+      };
+    } catch(error) {
+      error({
+        statusCode: err.response.status,
+        message: err.response.data.message,
+      });
+    }
   }
 
 }

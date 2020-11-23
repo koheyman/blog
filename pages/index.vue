@@ -23,16 +23,22 @@ export default {
     Headers,
     Card
   },
-  async asyncData({$config}) {
-    console.log(process.env.NODE_ENV);
-    const { data } = await axios.get(
-      'https://oipon.microcms.io/api/v1/posts',
-      {
-        headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
-      }
-    )
-    // console.log(data)
-    return data
+  async asyncData({$config, error}) {
+    try {
+      const { data } = await axios.get(
+        'https://oipon.microcms.io/api/v1/posts',
+        {
+          headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
+        }
+      )
+      // console.log(data)
+      return data
+    } catch(err) {
+      error({
+        statusCode: err.response.status,
+        message: err.response.data.message,
+      });
+    }
   }
 
 }

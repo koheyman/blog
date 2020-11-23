@@ -65,29 +65,36 @@ export default {
   //     ogImage: '{料金ページのOGP画像のパス}'
   //   }
   // }),
-  async asyncData({ $config, params }) {
-    const { data } = await axios.get(
-      `https://oipon.microcms.io/api/v1/posts/${params.slug}`,
-      {
-        headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
+  async asyncData({ $config, params, error }) {
+    try {
+      const { data } = await axios.get(
+        `https://oipon.microcms.io/api/v1/posts/${params.slug}`,
+        {
+          headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
+        }
+      )
+      const $ = cheerio.load(data.body)
+      $('pre code').each((_, elm) => {
+        const result = hljs.highlightAuto($(elm).text())
+        $(elm).html(result.value)
+        $(elm).addClass('hljs')
+      })
+      const headings = $('h1, h2, h3').toArray()
+      const toc = headings.map(data => ({
+        text: data.children[0].data,
+        id: data.attribs.id,
+        name: data.name
+      }))
+      return {
+        ...data,
+        toc,
+        body: $.html()
       }
-    )
-    const $ = cheerio.load(data.body)
-    $('pre code').each((_, elm) => {
-      const result = hljs.highlightAuto($(elm).text())
-      $(elm).html(result.value)
-      $(elm).addClass('hljs')
-    })
-    const headings = $('h1, h2, h3').toArray()
-    const toc = headings.map(data => ({
-      text: data.children[0].data,
-      id: data.attribs.id,
-      name: data.name
-    }))
-    return {
-      ...data,
-      toc,
-      body: $.html()
+    } catch(err) {
+      error({
+        statusCode: err.response.status,
+        message: err.response.data.message,
+      });
     }
   },
   head(){
