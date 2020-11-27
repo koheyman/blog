@@ -3,7 +3,7 @@
     <div class="category"># {{category}}</div>
     <div class="l-wrap">
       <main class="l-main">
-        <div v-if="items.length == 0" class="noitem">まだ記事がありません。</div>
+        <div v-show="items.length == 0" class="noitem">まだ記事がありません。</div>
         <div class="c-article-cards">
           <card v-for="item in items" :key="item.id" :content="item"></card>
         </div>

@@ -5,14 +5,14 @@
         <h1 class="title"><span class="category"><span>{{ category && category.name }}</span></span>{{ title }}</h1>
         <div class="head-meta">
           <div class="publishedAt"><CalendarIcon /><span v-text="$dayjs(`${publishedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
-          <div class="updatedAt" v-if="$dayjs(`${publishedAt}`).format('YYYY/MM/DD') != $dayjs(`${updatedAt}`).format('YYYY/MM/DD')"><UpdateIcon /><span v-text="$dayjs(`${updatedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
+          <div class="updatedAt" v-show="$dayjs(`${publishedAt}`).format('YYYY/MM/DD') != $dayjs(`${updatedAt}`).format('YYYY/MM/DD')"><UpdateIcon /><span v-text="$dayjs(`${updatedAt}`).format('YYYY/MM/DD')" class="date"></span></div>
         </div>
       </div>
     </div>
     <div class="l-wrap">
       <main class="l-main">
         <div class=" l-article">
-          <div class="mainimage" v-if="noimage != true"><img :src="mainimage.url" alt=""></div>
+          <div class="mainimage" v-show="noimage != true"><img :src="mainimage.url" alt=""></div>
           <div class="toc">
             <div class="toc_inner">
               <div class="toc_title"><span class="toc_icn"><ListIcon /></span>Contents</div>
