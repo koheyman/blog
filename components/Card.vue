@@ -1,7 +1,7 @@
 <template>
   <article class="c-article-card">
     <div class="c-article-card__inner">
-      <nuxt-link :to="`/${Content.id}`">
+      <nuxt-link :to="`/${Content.id}/`">
         <div class="c-article-card__thumb">
           <img :src="Content.mainimage.url" alt="">
         </div>
