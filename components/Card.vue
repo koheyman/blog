@@ -1,23 +1,23 @@
 <template>
   <article class="c-article-card">
     <div class="c-article-card__inner">
-      <nuxt-link :to="`/${Content.id}/`">
+      <nuxt-link :to="`/${content.id}/`">
         <div class="c-article-card__thumb">
-          <img :src="Content.mainimage.url" alt="">
+          <img :src="content.mainimage.url" alt="">
         </div>
         <div class="c-article-card__overview">
             <div class="c-article-card__head">
-              <span class="c-article-card__category">{{ Content.category && Content.category.name }}</span>
+              <span class="c-article-card__category">{{ content.category && content.category.name }}</span>
               <div class="publishedAt">
                 <CalendarIcon />
-                <span class="c-article-card__date" v-text="$dayjs(`${Content.publishedAt}`).format('YYYY/MM/DD')"></span>
+                <span class="c-article-card__date" v-text="$dayjs(`${content.publishedAt}`).format('YYYY/MM/DD')"></span>
               </div>
-              <div class="updatedAt" v-if="$dayjs(`${Content.publishedAt}`).format('YYYY/MM/DD') != $dayjs(`${Content.updatedAt}`).format('YYYY/MM/DD')">
+              <div class="updatedAt" v-if="$dayjs(`${content.publishedAt}`).format('YYYY/MM/DD') != $dayjs(`${content.updatedAt}`).format('YYYY/MM/DD')">
                 <UpdateIcon />
-                <span class="c-article-card__date" v-text="$dayjs(`${Content.updatedAt}`).format('YYYY/MM/DD')"></span>
+                <span class="c-article-card__date" v-text="$dayjs(`${content.updatedAt}`).format('YYYY/MM/DD')"></span>
               </div>
             </div>
-            <div class="c-article-card__title"><h2>{{ Content.title }}</h2></div>
+            <div class="c-article-card__title"><h2>{{ content.title }}</h2></div>
         </div>
       </nuxt-link>
     </div>
@@ -33,7 +33,7 @@ export default {
     UpdateIcon
   },
   props:{
-    Content: {
+    content: {
       type: Object
     }
   },}
