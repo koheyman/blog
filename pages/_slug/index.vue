@@ -352,5 +352,10 @@ export default {
     height: auto;
     text-align: center;
   }
+
+  /deep/ a {
+    color: #63b3ed;
+    text-decoration: underline;
+  }
 }
 </style>
