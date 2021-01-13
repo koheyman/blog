@@ -26,7 +26,7 @@ export default {
   async asyncData({$config, error}) {
     try {
       const { data } = await axios.get(
-        'https://oipon.microcms.io/api/v1/posts',
+        'https://oipon.microcms.io/api/v1/posts?limit=20',
         {
           headers: { 'X-API-KEY': 'e885d50d-8291-48d1-9664-d5cbbc4c3982' }
         }
