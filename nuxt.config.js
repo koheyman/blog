@@ -83,7 +83,7 @@ export default {
     '@nuxtjs/google-analytics'
   ],
   googleAnalytics: {
-    id: 'UA-179553169-1' //自身のアナリティクスコード
+    id: 'UA-179553169-1'
   },
   /*
   ** Nuxt.js modules
